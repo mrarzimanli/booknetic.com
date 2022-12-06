@@ -1,0 +1,24 @@
+@media (max-width: 768px) {
+    :root {
+
+        /* Font size - Heading */
+        --fs-h1: 36px;
+        --fs-h2: 30px;
+        --fs-h3: 24px;
+
+        /* Line height - Heading */
+        --lh-h1: 44px;
+        --lh-h2: 38px;
+        --lh-h3: 32px;
+
+        /* Font size - Basic */
+        --fs-b1: 18px;
+        --fs-b2: 16px;
+        --fs-b3: 14px;
+
+        /* Line height - Basic */
+        --lh-b1: 28px;
+        --lh-b2: 24px;
+        --lh-b3: 20px;
+    }
+}

@@ -1,0 +1,100 @@
+:root {
+    /* Design colors */
+    --purple-900: #3E1C96;
+    --purple-800: #4A1FB8;
+    --purple-700: #5925DC;
+    --purple-600: #6D2FFD;
+    --purple-500: #7A5AF8;
+    --purple-400: #9B8AFB;
+    --purple-300: #BDB4FE;
+    --purple-200: #D9D6FE;
+    --purple-100: #EBE9FE;
+    --purple-50: #F4F3FF;
+    --purple-25: #FAFAFF;
+
+    --soft-purple-300: #ECE3FF;
+    --soft-purple-200: #F4EBFF;
+    --soft-purple-100: #F2EDFF;
+    --soft-purple-50: #F9F5FF;
+    --soft-purple-25: #FAF8FE;
+
+    --rose-900: #89123E;
+    --rose-800: #A11043;
+    --rose-700: #C01048;
+    --rose-600: #E31B54;
+    --rose-500: #FF3D71;
+    --rose-400: #FD6F8E;
+    --rose-300: #FEA3B4;
+    --rose-200: #FECDD6;
+    --rose-100: #FFE4E8;
+    --rose-50: #FFF1F3;
+    --rose-25: #FFF5F6;
+
+    /* Secondary colors */
+    --yellow-400: #FFDE56;
+    --white: #FFFFFF;
+
+    /* Basic colors */
+    --gray-900: #101828;
+    --gray-800: #1D2939;
+    --gray-700: #344054;
+    --gray-600: #475467;
+    --gray-500: #667085;
+    --gray-400: #98A2B3;
+    --gray-300: #D0D5DD;
+    --gray-200: #EAECF0;
+    --gray-100: #F2F4F7;
+    --gray-50: #F9FAFB;
+    --gray-25: #FCFCFD;
+
+    /* Font family */
+    --primary-font-family: 'Inter', sans-serif;
+    --secondary-font-family: 'Mulish', sans-serif;
+
+    /* Font size - Heading */
+    --fs-h1: 60px;
+    --fs-h2: 36px;
+    --fs-h3: 30px;
+    --fs-h4: 20px;
+    --fs-h5: 18px;
+
+    /* Line height - Heading */
+    --lh-h1: 72px;
+    --lh-h2: 44px;
+    --lh-h3: 38px;
+    --lh-h4: 30px;
+    --lh-h5: 28px;
+
+    /* Font size - Basic */
+    --fs-b1: 20px;
+    --fs-b2: 18px;
+    --fs-b3: 16px;
+    --fs-b4: 14px;
+
+    /* Line height - Basic */
+    --lh-b1: 30px;
+    --lh-b2: 28px;
+    --lh-b3: 24px;
+    --lh-b4: 20px;
+
+    /* Font weight */
+    --fw-semi-bold: 600;
+    --fw-medium: 500;
+    --fw-regular: 400;
+
+    /* Border radius */
+    --br-2: 2px;
+    --br-4: 4px;
+    --br-6: 6px;
+    --br-8: 8px;
+    --br-10: 10px;
+    --br-12: 12px;
+    --br-16: 16px;
+    --br-20: 20px;
+
+    /* Box shadow */
+    --box-shadow-xs: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    --box-shadow-md: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+    --box-shadow-lg: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+    --box-shadow-xl: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+}
