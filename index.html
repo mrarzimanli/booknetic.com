@@ -5,12 +5,1326 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Booknetic">
     <title>Booknetic</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <div class="modal" id="try-demo-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close-modal" aria-label="Close">
+                        <img src="icons/x.svg" alt="close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span>Enter your email</span>
+                    <p>We will create a sandbox demo with special access and you will be able to test this sandbox demo as you wish within 1 week</p>
+                    <div class="form-general">
+                        <div>
+                            <input type="email" placeholder="Enter your email">
+                        </div>
+                        <button class="btn-general primary large">Try Demo</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" target="_blank">Test the demo version now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="references-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>Modal header</span>
+                    <button type="button" class="btn-close-modal" aria-label="Close">
+                        <img src="icons/x.svg" alt="close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <video controls muted loop poster="images/references/booking-widget-poster.webp">
+                        <source data-src="images/references/booking-widget.mp4" type="video/mp4">
+                        <source data-src="images/references/booking-widget.webm" type="video/webm">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <a href="index.html" class="header-logo">
+                        <img src="images/logo-light.svg" alt="Booknetic" width="150" height="32">
+                    </a>
+                    <nav class="header-menu">
+                        <ul>
+                            <li>
+                                <div class="header-menu-item">
+                                    <span>Products</span>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="header-menu-dropdown">
+                                    <div class="dropdown-menu">
+                                        <ul class="dropdown-menu-list">
+                                            <li>
+                                                <a href="#">
+                                                    <img src="icons/clock.svg" alt="Appointment booking">
+                                                    <span>Appointment booking</span>
+                                                    <div class="dropdown-menu-item-label"></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="icons/clock.svg" alt="Appointment booking">
+                                                    <span>Appointment booking</span>
+                                                    <div class="label">Soon</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="icons/clock.svg" alt="Appointment booking">
+                                                    <span>Appointment booking</span>
+                                                    <div class="label">Soon</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="dropdown-menu-footer">
+                                            <a class="btn-text primary" href="#">
+                                                <span>See all features</span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.16663 9.99984H15.8333M15.8333 9.99984L9.99996 4.1665M15.8333 9.99984L9.99996 15.8332" stroke="#7A5AF8" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="header-menu-item">
+                                    <span>Features</span>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="header-menu-dropdown">
+                                    <div class="dropdown-menu">
+                                        <ul class="dropdown-menu-list">
+                                            <li>
+                                                <a href="#">
+                                                    <img src="icons/clock.svg" alt="Appointment booking">
+                                                    <span>Appointment booking</span>
+                                                    <div class="dropdown-menu-item-label"></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="icons/clock.svg" alt="Appointment booking">
+                                                    <span>Appointment booking</span>
+                                                    <div class="label">Soon</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="icons/clock.svg" alt="Appointment booking">
+                                                    <span>Appointment booking</span>
+                                                    <div class="label">Soon</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="dropdown-menu-footer">
+                                            <a class="btn-text primary" href="#">
+                                                <span>See all features</span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.16663 9.99984H15.8333M15.8333 9.99984L9.99996 4.1665M15.8333 9.99984L9.99996 15.8332" stroke="#7A5AF8" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="header-menu-item" href="pricing.html">
+                                    <span>Pricing</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="btns-wrapper">
+                        <button class="btn-general secondary small btn-show-modal" data-target="#try-demo-modal">Try Demo</button>
+                        <a href="#" class="btn-general primary small" target="_blank">Buy Booknetic</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="home-page">
+        <section class="welcome">
+            <div class="container">
+                <div class="welcome-content">
+                    <div class="welcome-text">
+                        <h1>WordPress Appointment <span class="gradient-keyword">Booking</span> Plugin</h1>
+                        <p>Booknetic is the best appointment scheduling plugin for WordPress that allows customization and automation of online bookings.</p>
+                        <div class="form-general">
+                            <div>
+                                <input type="email" placeholder="Enter your email">
+                                <p>Create your free sandbox account and enjoy testing</p>
+                            </div>
+                            <button class="btn-general primary large">Try Demo</button>
+                        </div>
+                    </div>
+                    <div class="welcome-image">
+                        <img src="images/booking_calendar.svg" alt="Booknetik - Booking Panel">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <div class="partners-content content-box-lg">
+                    <div>
+                        <img src="images/partners/envato.svg" alt="envato">
+                    </div>
+                    <div>
+                        <img src="images/partners/colorlib.svg" alt="colorlib">
+                    </div>
+                    <div>
+                        <img src="images/partners/athemes.svg" alt="athemes">
+                    </div>
+                    <div>
+                        <img src="images/partners/wpmayor.svg" alt="mpmayor">
+                    </div>
+                    <div>
+                        <img src="images/partners/wpexplorer.svg" alt="wpexplorer">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="how-it-works">
+            <div class="container">
+                <div class="how-it-works-content content-box-lg">
+                    <div class="section-header">
+                        <h2>How It Works?</h2>
+                        <p>With a simple 3 step installation process and a helpful setup wizard, you will get ready to accept bookings in no time.</p>
+                    </div>
+                    <div class="steps-graphics">
+                        <img src="images/how-it-works.svg" alt="how it works">
+                    </div>
+                    <div class="steps-labels">
+                        <span>Install Booknetic on WordPress </span>
+                        <span>Setup with a quick guide</span>
+                        <span>Publish the link</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div class="container">
+                <div class="features-content content-box-lg">
+                    <div class="section-header">
+                        <h2>Features</h2>
+                        <p>Booknetic addons to maximize your appointment process efficiency</p>
+                    </div>
+                    <div class="features-wrapper">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="features-text-wrapper">
+                                    <div class="feature-text-item active" data-target="#feature-image-1">
+                                        <div class="feature-text-item-header">
+                                            <h4>Booking Widget</h4>
+                                        </div>
+                                        <div class="feature-text-item-body">
+                                            <img class="d-lg-none" src="images/features/1.png" alt="Booking Widget">
+                                            <p>Booknetic plugin appointment booking allows you to request clients to fill in the information.</p>
+                                            <a class="btn-text primary" href="#">
+                                                <span>Learn more</span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.16663 9.99984H15.8333M15.8333 9.99984L9.99996 4.1665M15.8333 9.99984L9.99996 15.8332" stroke="#7A5AF8" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="feature-text-item" data-target="#feature-image-2">
+                                        <div class="feature-text-item-header">
+                                            <h4>Booking Widget</h4>
+                                        </div>
+                                        <div class="feature-text-item-body">
+                                            <img class="d-lg-none" src="images/features/1.png" alt="Booking Widget">
+                                            <p>Booknetic plugin appointment booking allows you to request clients to fill in the information.</p>
+                                            <a class="btn-text primary" href="#">
+                                                <span>Learn more</span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.16663 9.99984H15.8333M15.8333 9.99984L9.99996 4.1665M15.8333 9.99984L9.99996 15.8332" stroke="#7A5AF8" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="feature-text-item" data-target="#feature-image-3">
+                                        <div class="feature-text-item-header">
+                                            <h4>Booking Widget</h4>
+                                        </div>
+                                        <div class="feature-text-item-body">
+                                            <img class="d-lg-none" src="images/features/1.png" alt="Booking Widget">
+                                            <p>Booknetic plugin appointment booking allows you to request clients to fill in the information.</p>
+                                            <a class="btn-text primary" href="#">
+                                                <span>Learn more</span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.16663 9.99984H15.8333M15.8333 9.99984L9.99996 4.1665M15.8333 9.99984L9.99996 15.8332" stroke="#7A5AF8" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-flex">
+                                <div class="features-image-wrapper">
+                                    <div class="feature-image-item" id="feature-image-1">
+                                        <img src="images/features/1.png" alt="Booking Widget">
+                                    </div>
+                                    <div class="feature-image-item" id="feature-image-2">
+                                        <img src="images/features/2.png" alt="Booking Widget">
+                                    </div>
+                                    <div class="feature-image-item" id="feature-image-3">
+                                        <img src="images/features/3.png" alt="Booking Widget">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="interfaces">
+            <div class="container">
+                <div class="interfaces-content content-box-lg">
+                    <div class="section-header">
+                        <h3>Booknetic interface</h3>
+                    </div>
+                    <div class="interfaces-wrapper">
+                        <div class="tabs">
+                            <button class="btn-tab active" data-target="#tab-item-1">Admin</button>
+                            <button class="btn-tab" data-target="#tab-item-2">Booking panel</button>
+                            <button class="btn-tab" data-target="#tab-item-3">Customer panel</button>
+                        </div>
+                        <div class="tabs-wrapper">
+                            <div class="tab-item" id="tab-item-1">
+                                <p>1. Booknetic WordPress appointment booking plugin matches the booking needs of Booknetic WordPress appointment booking plugin matches </p>
+                                <img src="images/interfaces/admin-panel.svg" alt="Booknetic admin panel">
+                                <a href="#" class="btn-general primary" target="_blank">Try demo</a>
+                            </div>
+                            <div class="tab-item" id="tab-item-2">
+                                <p>2. Booknetic WordPress appointment booking plugin matches the booking needs of Booknetic WordPress appointment booking plugin matches </p>
+                                <img src="images/interfaces/booking-panel.svg" alt="Booknetic booking panel">
+                                <a href="#" class="btn-general primary" target="_blank">Try demo</a>
+                            </div>
+                            <div class="tab-item" id="tab-item-3">
+                                <p>3. Booknetic WordPress appointment booking plugin matches the booking needs of Booknetic WordPress appointment booking plugin matches </p>
+                                <img src="images/interfaces/customer-panel.svg" alt="Booknetic customer panel">
+                                <a href="#" class="btn-general primary" target="_blank">Try demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="business">
+            <div class="container">
+                <div class="business-content content-box-lg">
+                    <div class="section-header">
+                        <h3>Perfect for</h3>
+                        <p>Booknetic WordPress appointment booking plugin matches the booking needs of</p>
+                    </div>
+                    <div class="business-wrapper">
+                        <div class="row gx-5 gy-6">
+                            <div class="col-lg-3 d-flex">
+                                <div class="business-item">
+                                    <div>
+                                        <img src="images/business/1.png" alt="Gym, Sport, and Fitness">
+                                    </div>
+                                    <h5>Gym, Sport, and Fitness</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 d-flex">
+                                <div class="business-item">
+                                    <div>
+                                        <img src="images/business/2.png" alt="Gym, Sport, and Fitness">
+                                    </div>
+                                    <h5>Gym, Sport, and Fitness</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 d-flex">
+                                <div class="business-item">
+                                    <div>
+                                        <img src="images/business/1.png" alt="Gym, Sport, and Fitness">
+                                    </div>
+                                    <h5>Gym, Sport, and Fitness</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 d-flex">
+                                <div class="business-item">
+                                    <div>
+                                        <img src="images/business/2.png" alt="Gym, Sport, and Fitness">
+                                    </div>
+                                    <h5>Gym, Sport, and Fitness</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 d-flex">
+                                <div class="business-item">
+                                    <div>
+                                        <img src="images/business/1.png" alt="Gym, Sport, and Fitness">
+                                    </div>
+                                    <h5>Gym, Sport, and Fitness</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 d-flex">
+                                <div class="business-item">
+                                    <div>
+                                        <img src="images/business/2.png" alt="Gym, Sport, and Fitness">
+                                    </div>
+                                    <h5>Gym, Sport, and Fitness</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 d-flex">
+                                <div class="business-item">
+                                    <div>
+                                        <img src="images/business/1.png" alt="Gym, Sport, and Fitness">
+                                    </div>
+                                    <h5>Gym, Sport, and Fitness</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 d-flex">
+                                <div class="business-item">
+                                    <div>
+                                        <img src="images/business/2.png" alt="Gym, Sport, and Fitness">
+                                    </div>
+                                    <h5>Gym, Sport, and Fitness</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-footer">
+                        <button class="btn-text primary">
+                            <span>Show more</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="addons">
+            <div class="container">
+                <div class="addons-content content-box-lg">
+                    <div class="section-header">
+                        <h3>Add-ons</h3>
+                        <p>Booknetic addons to maximize your appointment process efficiency</p>
+                    </div>
+                    <div class="addons-wrapper">
+                        <div class="row gx-5 gy-6">
+                            <div class="col-lg-4 d-flex">
+                                <div class="addons-item">
+                                    <div>
+                                        <img src="icons/zoom.svg" alt="Zoom Integration">
+                                    </div>
+                                    <h4>Zoom Integration</h4>
+                                    <p>Built-in Zoom integration to support your business operations</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-flex">
+                                <div class="addons-item">
+                                    <div>
+                                        <img src="icons/g-calendar.svg" alt="Google Calendar 2-way Sync">
+                                    </div>
+                                    <h4>Google Calendar 2-way Sync</h4>
+                                    <p>Effectively manage your schedule with shared calendar</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-flex">
+                                <div class="addons-item">
+                                    <div>
+                                        <img src="icons/logos_woocommerce-icon.svg" alt="WooCommerce Integration">
+                                    </div>
+                                    <h4>WooCommerce Integration</h4>
+                                    <p>Integrate any payment gateways which is supported by WooCommerce</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-flex">
+                                <div class="addons-item">
+                                    <div>
+                                        <img src="icons/tag-03.svg" alt="Coupons">
+                                    </div>
+                                    <h4>Coupons</h4>
+                                    <p>Streamline coupons or discount offers from the appointment booking system</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-flex">
+                                <div class="addons-item">
+                                    <div>
+                                        <img src="icons/bar-chart-10.svg" alt="Reporting Module">
+                                    </div>
+                                    <h4>Reporting Module</h4>
+                                    <p>Anaylze the effectiveness of business operations by location, staff, services, and their earnings</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-flex">
+                                <div class="addons-item">
+                                    <div>
+                                        <img src="icons/star-01.svg" alt="Ratings & Reviews">
+                                    </div>
+                                    <h4>Ratings & Reviews</h4>
+                                    <p>Let customers share their thoughts about your services and staff</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-footer">
+                        <a href="#" class="btn-text primary underline">
+                            <span>See all add-ons</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="container">
+                <div class="advantages-content content-box-lg">
+                    <div class="section-header">
+                        <h3>Why Booknetic</h3>
+                        <p>We take appointment bookings to the next levely</p>
+                    </div>
+                    <div class="advantages-wrapper">
+                        <div class="row gx-6">
+                            <div class="col-lg-6">
+                                <div class="advantage-text">
+                                    <div>
+                                        <img src="icons/clock-check.svg" alt="clock check">
+                                    </div>
+                                    <h4>Automate your business</h4>
+                                    <p>You can 100% automate your business with Booknetic</p>
+                                    <ul>
+                                        <li>
+                                            <img src="icons/check-icon.svg" alt="check icon">
+                                            <span>Receiving online appointments</span>
+                                        </li>
+                                        <li>
+                                            <img src="icons/check-icon.svg" alt="check icon">
+                                            <span>Automate notifications and reminders via the Workflow module</span>
+                                        </li>
+                                        <li>
+                                            <img src="icons/check-icon.svg" alt="check icon">
+                                            <span>With the +15 integrations, fully automate your business process</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="advantage-image">
+                                    <img src="images/why-booknetic/image 19.png" alt="Automate your business">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gx-6">
+                            <div class="col-lg-6">
+                                <div class="advantage-text">
+                                    <div>
+                                        <img src="icons/clock-check.svg" alt="clock check">
+                                    </div>
+                                    <h4>Automate your business</h4>
+                                    <p>You can 100% automate your business with Booknetic</p>
+                                    <ul>
+                                        <li>
+                                            <img src="icons/check-icon.svg" alt="check icon">
+                                            <span>Receiving online appointments</span>
+                                        </li>
+                                        <li>
+                                            <img src="icons/check-icon.svg" alt="check icon">
+                                            <span>Automate notifications and reminders via the Workflow module</span>
+                                        </li>
+                                        <li>
+                                            <img src="icons/check-icon.svg" alt="check icon">
+                                            <span>With the +15 integrations, fully automate your business process</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="advantage-image">
+                                    <img src="images/why-booknetic/image 19.png" alt="Automate your business">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gx-6">
+                            <div class="col-lg-6">
+                                <div class="advantage-text">
+                                    <div>
+                                        <img src="icons/clock-check.svg" alt="clock check">
+                                    </div>
+                                    <h4>Automate your business</h4>
+                                    <p>You can 100% automate your business with Booknetic</p>
+                                    <ul>
+                                        <li>
+                                            <img src="icons/check-icon.svg" alt="check icon">
+                                            <span>Receiving online appointments</span>
+                                        </li>
+                                        <li>
+                                            <img src="icons/check-icon.svg" alt="check icon">
+                                            <span>Automate notifications and reminders via the Workflow module</span>
+                                        </li>
+                                        <li>
+                                            <img src="icons/check-icon.svg" alt="check icon">
+                                            <span>With the +15 integrations, fully automate your business process</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="advantage-image">
+                                    <img src="images/why-booknetic/image 19.png" alt="Automate your business">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gx-6">
+                            <div class="col-lg-6">
+                                <div class="advantage-text">
+                                    <div>
+                                        <img src="icons/clock-check.svg" alt="clock check">
+                                    </div>
+                                    <h4>Automate your business</h4>
+                                    <p>You can 100% automate your business with Booknetic</p>
+                                    <ul>
+                                        <li>
+                                            <img src="icons/check-icon.svg" alt="check icon">
+                                            <span>Receiving online appointments</span>
+                                        </li>
+                                        <li>
+                                            <img src="icons/check-icon.svg" alt="check icon">
+                                            <span>Automate notifications and reminders via the Workflow module</span>
+                                        </li>
+                                        <li>
+                                            <img src="icons/check-icon.svg" alt="check icon">
+                                            <span>With the +15 integrations, fully automate your business process</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="advantage-image">
+                                    <img src="images/why-booknetic/image 19.png" alt="Automate your business">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                <div class="news-content content-box-lg">
+                    <div class="section-header">
+                        <h3>Hots news Booknetic</h3>
+                        <p>We take appointment bookings to the next level</p>
+                    </div>
+                    <div class="news-wrapper">
+                        <div class="row gx-5">
+                            <div class="col-lg-6">
+                                <div class="news-text">
+                                    <div class="bknt-info">
+                                        <span class="bknt-version">Booknetic version: 3.4.0</span>
+                                        <span class="bknt-date">02.12.2022</span>
+                                    </div>
+                                    <div class="news-item">
+                                        <span>
+                                            <img src="icons/stars-02.svg" alt="star">
+                                        </span>
+                                        <div>
+                                            <span>Added features:</span>
+                                            <ul>
+                                                <li>Custom Duration</li>
+                                                <li>Conversion tracking (Google Analytics and Google Tag Manager)</li>
+                                                <li>Donations</li>
+                                                <li>Translate the dynamic data (Services, Staff, Locations, etc.)</li>
+                                                <li>Conditions for Custom Forms (Conditional Fields)</li>
+                                                <li>New shortcodes to show each dates for the recurring appointments</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="news-item">
+                                        <span>
+                                            <img src="icons/tool-01.svg" alt="star">
+                                        </span>
+                                        <div>
+                                            <span>Fixed bugs:</span>
+                                            <ul>
+                                                <li>Related to the limited booking days</li>
+                                                <li>Related to the customer duplication on multi-booking</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="news-item">
+                                        <span>
+                                            <img src="icons/trend-up-01.svg" alt="star">
+                                        </span>
+                                        <div>
+                                            <span>Improvements:</span>
+                                            <ul>
+                                                <li>Made minor improvements and fixed some small bugs</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="news-image">
+                                    <img src="images/hot-news.svg" alt="hots news">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="roadmap">
+            <div class="container">
+                <div class="roadmap-content content-box-lg">
+                    <div class="section-header">
+                        <h3>Roadmap Booknetic</h3>
+                        <p>Booknetic WordPress appointment booking plugin matches the booking needs of</p>
+                    </div>
+                    <div class="roadmap-wrapper">
+                        <div class="roadmap-info">
+                            <div class="row">
+                                <div class="col-lg-4 d-flex">
+                                    <div class="roadmap-info-item left">
+                                        <div>
+                                            <span>Released</span>
+                                            <span>Features</span>
+                                        </div>
+                                        <span>56</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-flex">
+                                    <div class="roadmap-info-item center">
+                                        <a href="#" class="btn-general primary" target="_blank">Suggest a feature</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-flex">
+                                    <div class="roadmap-info-item right">
+                                        <div>
+                                            <span>Planned</span>
+                                            <span>Features</span>
+                                        </div>
+                                        <span>24</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="roadmapSwiper"> Burda sizin reklamınız ola bilərdi :) </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="references">
+            <div class="container">
+                <div class="references-content content-box-lg">
+                    <div class="section-header">
+                        <h3>Talks about the Booknetic</h3>
+                    </div>
+                    <div class="references-wrapper">
+                        <div class="swiper referencesSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="reference-box">
+                                        <div class="reference-box-img btn-show-modal" data-target="#references-modal">
+                                            <img data-src="images/references/1.png" class="swiper-lazy" alt="Booknetic">
+                                            <div class="swiper-lazy-preloader"></div>
+                                            <div class="overlay">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M19.6432 12.848C20.2699 12.4563 20.2699 11.5436 19.6432 11.152L6.53 2.95621C5.86395 2.53993 5 3.01878 5 3.80421V20.1957C5 20.9812 5.86395 21.46 6.53 21.0437L19.6432 12.848Z" fill="#14161B" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="reference-box-text">
+                                            <h4>20 Best WordPress Booking and Reservation Plugin</h4>
+                                            <p>This is an online appointment booking plugin which supports WooCommerce, PayPal, Stripe, and SMS and email notifications</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="reference-box" target="_blank">
+                                        <div class="reference-box-img">
+                                            <img data-src="images/references/1.png" class="swiper-lazy" alt="Booknetic">
+                                            <div class="swiper-lazy-preloader"></div>
+                                            <div class="overlay">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 18V12C19 11.448 19.447 11 20 11C20.553 11 21 11.448 21 12V18C21 19.654 19.654 21 18 21H6C4.346 21 3 19.654 3 18V6C3 4.346 4.346 3 6 3H12C12.553 3 13 3.448 13 4C13 4.552 12.553 5 12 5H6C5.448 5 5 5.449 5 6V18C5 18.551 5.448 19 6 19H18C18.552 19 19 18.551 19 18ZM17.5781 5.008L15.9951 5C15.4421 4.997 14.9971 4.547 15.0001 3.995C15.0031 3.444 15.4501 3 16.0001 3H16.0051L20.0021 3.02C20.5521 3.023 20.9971 3.469 20.9971 4.019L21.0001 7.999C21.0001 8.552 20.5531 9 20.0011 9H20.0001C19.4481 9 19.0001 8.553 19.0001 8.001L18.9991 6.415L12.7071 12.707C12.5121 12.902 12.2561 13 12.0001 13C11.7441 13 11.4881 12.902 11.2931 12.707C10.9021 12.316 10.9021 11.684 11.2931 11.293L17.5781 5.008Z" fill="#14161B" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="reference-box-text">
+                                            <h4>20 Best WordPress Booking and Reservation Plugin</h4>
+                                            <p>This is an online appointment booking plugin which supports</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="reference-box" target="_blank">
+                                        <div class="reference-box-img">
+                                            <img data-src="images/references/1.png" class="swiper-lazy" alt="Booknetic">
+                                            <div class="swiper-lazy-preloader"></div>
+                                            <div class="overlay">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 18V12C19 11.448 19.447 11 20 11C20.553 11 21 11.448 21 12V18C21 19.654 19.654 21 18 21H6C4.346 21 3 19.654 3 18V6C3 4.346 4.346 3 6 3H12C12.553 3 13 3.448 13 4C13 4.552 12.553 5 12 5H6C5.448 5 5 5.449 5 6V18C5 18.551 5.448 19 6 19H18C18.552 19 19 18.551 19 18ZM17.5781 5.008L15.9951 5C15.4421 4.997 14.9971 4.547 15.0001 3.995C15.0031 3.444 15.4501 3 16.0001 3H16.0051L20.0021 3.02C20.5521 3.023 20.9971 3.469 20.9971 4.019L21.0001 7.999C21.0001 8.552 20.5531 9 20.0011 9H20.0001C19.4481 9 19.0001 8.553 19.0001 8.001L18.9991 6.415L12.7071 12.707C12.5121 12.902 12.2561 13 12.0001 13C11.7441 13 11.4881 12.902 11.2931 12.707C10.9021 12.316 10.9021 11.684 11.2931 11.293L17.5781 5.008Z" fill="#14161B" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="reference-box-text">
+                                            <h4>20 Best WordPress Booking and Reservation Plugin</h4>
+                                            <p>This is an online appointment booking plugin which supports</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="reference-box" target="_blank">
+                                        <div class="reference-box-img">
+                                            <img data-src="images/references/1.png" class="swiper-lazy" alt="Booknetic">
+                                            <div class="swiper-lazy-preloader"></div>
+                                            <div class="overlay">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 18V12C19 11.448 19.447 11 20 11C20.553 11 21 11.448 21 12V18C21 19.654 19.654 21 18 21H6C4.346 21 3 19.654 3 18V6C3 4.346 4.346 3 6 3H12C12.553 3 13 3.448 13 4C13 4.552 12.553 5 12 5H6C5.448 5 5 5.449 5 6V18C5 18.551 5.448 19 6 19H18C18.552 19 19 18.551 19 18ZM17.5781 5.008L15.9951 5C15.4421 4.997 14.9971 4.547 15.0001 3.995C15.0031 3.444 15.4501 3 16.0001 3H16.0051L20.0021 3.02C20.5521 3.023 20.9971 3.469 20.9971 4.019L21.0001 7.999C21.0001 8.552 20.5531 9 20.0011 9H20.0001C19.4481 9 19.0001 8.553 19.0001 8.001L18.9991 6.415L12.7071 12.707C12.5121 12.902 12.2561 13 12.0001 13C11.7441 13 11.4881 12.902 11.2931 12.707C10.9021 12.316 10.9021 11.684 11.2931 11.293L17.5781 5.008Z" fill="#14161B" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="reference-box-text">
+                                            <h4>20 Best WordPress Booking and Reservation Plugin</h4>
+                                            <p>This is an online appointment booking plugin which supports</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="reference-box" target="_blank">
+                                        <div class="reference-box-img">
+                                            <img data-src="images/references/1.png" class="swiper-lazy" alt="Booknetic">
+                                            <div class="swiper-lazy-preloader"></div>
+                                            <div class="overlay">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19 18V12C19 11.448 19.447 11 20 11C20.553 11 21 11.448 21 12V18C21 19.654 19.654 21 18 21H6C4.346 21 3 19.654 3 18V6C3 4.346 4.346 3 6 3H12C12.553 3 13 3.448 13 4C13 4.552 12.553 5 12 5H6C5.448 5 5 5.449 5 6V18C5 18.551 5.448 19 6 19H18C18.552 19 19 18.551 19 18ZM17.5781 5.008L15.9951 5C15.4421 4.997 14.9971 4.547 15.0001 3.995C15.0031 3.444 15.4501 3 16.0001 3H16.0051L20.0021 3.02C20.5521 3.023 20.9971 3.469 20.9971 4.019L21.0001 7.999C21.0001 8.552 20.5531 9 20.0011 9H20.0001C19.4481 9 19.0001 8.553 19.0001 8.001L18.9991 6.415L12.7071 12.707C12.5121 12.902 12.2561 13 12.0001 13C11.7441 13 11.4881 12.902 11.2931 12.707C10.9021 12.316 10.9021 11.684 11.2931 11.293L17.5781 5.008Z" fill="#14161B" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="reference-box-text">
+                                            <h4>20 Best WordPress Booking and Reservation Plugin</h4>
+                                            <p>This is an online appointment booking plugin which supports</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-btn-next">
+                            <img data-src="icons/angle-right.svg" class="lazyload" alt="angle right">
+                        </div>
+                        <div class="swiper-btn-prev">
+                            <img data-src="icons/angle-left.svg" class="lazyload" alt="angle left">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials">
+            <div class="container">
+                <div class="testimonials-content content-box-lg">
+                    <div class="section-header">
+                        <h3>In customer support, we are peerless</h3>
+                        <p>Whenever you need help our support team is as far as one click away from you</p>
+                    </div>
+                    <div class="testimonials-wrapper">
+                        <div class="swiper testimonialsSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-box-img">
+                                            <img data-src="images/testimonials/user-1.svg" class="swiper-lazy" alt="testimonial">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="testimonial-box-text">
+                                            <span>Skylar Botosh</span>
+                                            <p>I'm very very very happy with booknetic plugin in regard to the code quality, the logic in programming and customer service. This plugin is simply the best while in other there is always something missing. This is to set up and bug-free. 2 weeks on and still have no issues. The only problem i have is codecanyon doesn't allow 10 stars rating for them otherwise I would select them all of them.</p>
+                                            <div class="testimonial-rate">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star.svg" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-box-img">
+                                            <img data-src="images/testimonials/user-2.svg" class="swiper-lazy" alt="testimonial">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="testimonial-box-text">
+                                            <span>Skylar Botosh</span>
+                                            <p>I'm very very very happy with booknetic plugin in regard to the code quality, the logic in programming and customer service. This plugin is simply the best while in other there is always something missing. This is to set up and bug-free.</p>
+                                            <div class="testimonial-rate">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-box-img">
+                                            <img data-src="images/testimonials/user-3.svg" class="swiper-lazy" alt="testimonial">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="testimonial-box-text">
+                                            <span>Skylar Botosh</span>
+                                            <p>I'm very very very happy with booknetic plugin in regard to the code quality, the logic in programming and customer service. This plugin is simply the best while in other there is always something missing. This is to set up and bug-free.</p>
+                                            <div class="testimonial-rate">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-box-img">
+                                            <img data-src="images/testimonials/user-1.svg" class="swiper-lazy" alt="testimonial">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="testimonial-box-text">
+                                            <span>Skylar Botosh</span>
+                                            <p>I'm very very very happy with booknetic plugin in regard to the code quality, the logic in programming and customer service. This plugin is simply the best while in other there is always something missing. This is to set up and bug-free. 2 weeks on and still have no issues. The only problem i have is codecanyon doesn't allow 10 stars rating for them otherwise I would select them all of them.</p>
+                                            <div class="testimonial-rate">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star.svg" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-box-img">
+                                            <img data-src="images/testimonials/user-2.svg" class="swiper-lazy" alt="testimonial">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="testimonial-box-text">
+                                            <span>Skylar Botosh</span>
+                                            <p>I'm very very very happy with booknetic plugin in regard to the code quality, the logic in programming and customer service. This plugin is simply the best while in other there is always something missing. This is to set up and bug-free.</p>
+                                            <div class="testimonial-rate">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-box-img">
+                                            <img data-src="images/testimonials/user-3.svg" class="swiper-lazy" alt="testimonial">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="testimonial-box-text">
+                                            <span>Skylar Botosh</span>
+                                            <p>I'm very very very happy with booknetic plugin in regard to the code quality, the logic in programming and customer service. This plugin is simply the best while in other there is always something missing. This is to set up and bug-free.</p>
+                                            <div class="testimonial-rate">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="swiper-btn-next">
+                            <img data-src="icons/angle-right.svg" class="lazyload" alt="angle right">
+                        </div>
+                        <div class="swiper-btn-prev">
+                            <img data-src="icons/angle-left.svg" class="lazyload" alt="angle left">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="subscribe">
+            <div class="container">
+                <div class="subscribe-content content-box-lg">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="section-header">
+                                <h2>Sign up for our newsletter</h2>
+                                <p>Be the first to know about releases and industry news and insights.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-general small">
+                                <div>
+                                    <input type="email" placeholder="Enter your email">
+                                    <p>We care about your data in our <a href="#">privacy policy</a>.</p>
+                                </div>
+                                <button class="btn-general primary small">Try Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="call-to-action">
+            <div class="container">
+                <div class="call-to-action-content content-box-lg">
+                    <div class="section-header">
+                        <span>It is very <span class="gradient-keyword">comfortable</span>. Yes?</span>
+                        <p>Booknetic is a simple yet powerful plugin for accepting online bookings & payments on your WordPress site.</p>
+                        <div class="btns-wrapper">
+                            <a href="#" class="btn-general" target="_blank">Try Demo</a>
+                            <a href="#" class="btn-general primary" target="_blank">Buy now $79</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content content-box-md">
+                <div class="row g-5">
+                    <div class="col-lg">
+                        <div class="footer-item">
+                            <span>Product</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Appointment booking</a>
+                                </li>
+                                <li>
+                                    <a href="#">Event booking (soon)</a>
+                                </li>
+                                <li>
+                                    <a href="#">Hotel booking (soon)</a>
+                                </li>
+                                <li>
+                                    <a href="#">Rental booking (soon)</a>
+                                </li>
+                                <li>
+                                    <a href="#">Booknetic SaaS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <span>Useful link</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Calendly wordpress alternatives</a>
+                                </li>
+                                <li>
+                                    <a href="#">Hubspot wordpress alternatives</a>
+                                </li>
+                                <li>
+                                    <a href="#">Simplybookme wordpress alternatives</a>
+                                </li>
+                                <li>
+                                    <a href="#">Setmore wordpress alternatives</a>
+                                </li>
+                                <li>
+                                    <a href="#">Calendly vs Booknetic</a>
+                                </li>
+                                <li>
+                                    <a href="#">Simplybookme vs Booknetic</a>
+                                </li>
+                                <li>
+                                    <a href="#">Setmore vs Booknetic</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="footer-item custom-size">
+                            <span>Navigation</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Features</a>
+                                </li>
+                                <li>
+                                    <a href="#">Integrations</a>
+                                </li>
+                                <li>
+                                    <a href="#">Addons</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pricing</a>
+                                </li>
+                                <li>
+                                    <a href="#">Try demo</a>
+                                </li>
+                                <li>
+                                    <a href="#">Affiliate program</a>
+                                </li>
+                                <li>
+                                    <a href="#">Partners</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-item custom-size">
+                            <span>Resources</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Documentation</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact support</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#">Suggest a feature</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sitemap <span>New</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">Partners</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-item">
+                            <span>Popular features</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Custom forms</a>
+                                </li>
+                                <li>
+                                    <a href="#">Workflow</a>
+                                </li>
+                                <li>
+                                    <a href="#">Recurring appointments</a>
+                                </li>
+                                <li>
+                                    <a href="#">Group appointment</a>
+                                </li>
+                                <li>
+                                    <a href="#">Invoices</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tax</a>
+                                </li>
+                                <li>
+                                    <a href="#">Coupons</a>
+                                </li>
+                                <li>
+                                    <a href="#">Partners</a>
+                                </li>
+                                <li>
+                                    <a href="#">Customer panel</a>
+                                </li>
+                                <li>
+                                    <a href="#">Custom appointment statuses</a>
+                                </li>
+                                <li>
+                                    <a href="#">Waiting list</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Multi booking feature</a>
+                                </li>
+                                <li>
+                                    <a href="#">User role manager</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <span>Legal</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Privacy policy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-item">
+                            <span>Popular integrations</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Zoom</a>
+                                </li>
+                                <li>
+                                    <a href="#">Google calendar</a>
+                                </li>
+                                <li>
+                                    <a href="#">Paypal</a>
+                                </li>
+                                <li>
+                                    <a href="#">Stripe</a>
+                                </li>
+                                <li>
+                                    <a href="#">Whatsapp</a>
+                                </li>
+                                <li>
+                                    <a href="#">WooCommerce</a>
+                                </li>
+                                <li>
+                                    <a href="#">Zapier, IFTTT, Integromat</a>
+                                </li>
+                                <li>
+                                    <a href="#">Telegram</a>
+                                </li>
+                                <li>
+                                    <a href="#">Google analytics and tag manager</a>
+                                </li>
+                                <li>
+                                    <a href="#">Custom appointment statuses</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <span>Our brands</span>
+                            <ul>
+                                <li>
+                                    <a href="#">FS Code</a>
+                                </li>
+                                <li>
+                                    <a href="#">FS Poster</a>
+                                </li>
+                                <li>
+                                    <a href="#">Planly</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pagear</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="copyright-primary">
+                        <a class="footer-logo" href="index.html">
+                            <img src="images/logo-dark.svg" alt="Booknetic">
+                        </a>
+                        <div class="site-langs">
+                            <div class="selected-lang">
+                                <img src="images/flags/az.svg" alt="Azerbaijani flag">
+                                <span>Azerbaijani</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="lang-dropdown">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flags/us.svg" alt="English flag">
+                                            <span>English</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flags/fr.svg" alt="French flag">
+                                            <span>French</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flags/ru.svg" alt="Russian flag">
+                                            <span>Russian</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flags/es.svg" alt="Spanish flag">
+                                            <span>Spanish</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flags/pt.svg" alt="Portuguese flag">
+                                            <span>Portuguese</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright-secondary">
+                        <p>© 2022 Booknetic. All rights reserved.</p>
+                        <ul class="social-list">
+                            <li>
+                                <a href="#" aria-label="github" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9995 0.999023C5.92551 0.999023 0.999512 5.81902 0.999512 11.766C0.999512 16.521 4.15151 20.557 8.52251 21.98C9.07351 22.079 9.27351 21.747 9.27351 21.461C9.27351 21.206 9.26451 20.528 9.25951 19.631C6.19951 20.281 5.55451 18.187 5.55451 18.187C5.05351 16.943 4.33251 16.612 4.33251 16.612C3.33351 15.944 4.40851 15.958 4.40851 15.958C5.51251 16.034 6.09251 17.067 6.09251 17.067C7.07351 18.713 8.66651 18.237 9.29451 17.962C9.39451 17.267 9.67751 16.792 9.99251 16.522C7.54951 16.251 4.98151 15.327 4.98151 11.202C4.98151 10.027 5.41051 9.06602 6.11451 8.31302C6.00051 8.04102 5.62351 6.94602 6.22151 5.46402C6.22151 5.46402 7.14551 5.17502 9.24751 6.56702C10.1245 6.32802 11.0655 6.21002 12.0005 6.20502C12.9345 6.21002 13.8755 6.32802 14.7545 6.56702C16.8545 5.17502 17.7765 5.46402 17.7765 5.46402C18.3765 6.94602 17.9995 8.04102 17.8855 8.31302C18.5905 9.06602 19.0165 10.027 19.0165 11.202C19.0165 15.338 16.4445 16.248 13.9945 16.515C14.3895 16.847 14.7405 17.504 14.7405 18.508C14.7405 19.947 14.7275 21.108 14.7275 21.461C14.7275 21.749 14.9255 22.084 15.4835 21.979C19.8505 20.553 22.9995 16.52 22.9995 11.766C22.9995 5.81902 18.0745 0.999023 11.9995 0.999023Z" fill="#EAECF0" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="facebook" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 3.49902C17 3.22302 16.775 2.99902 16.5 2.99902H14C11.238 2.99902 9 5.01402 9 7.49902V10.199H6.5C6.224 10.199 6 10.423 6 10.699V13.299C6 13.575 6.224 13.799 6.5 13.799H9V20.499C9 20.775 9.224 20.999 9.5 20.999H12.5C12.775 20.999 13 20.775 13 20.499V13.799H15.619C15.844 13.799 16.041 13.649 16.102 13.433L16.823 10.833C16.912 10.515 16.672 10.199 16.342 10.199H13V7.49902C13 7.00202 13.447 6.59902 14 6.59902H16.5C16.775 6.59902 17 6.37502 17 6.09902V3.49902Z" fill="#EAECF0" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="twitter" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07693 19.9993C15.3229 19.9993 19.5149 14.3733 19.5149 9.0343C19.5149 8.8873 20.5449 8.0033 20.9859 6.1603C21.0759 5.7863 20.7119 5.4913 20.3689 5.6483C19.4889 6.0523 18.5959 5.7323 18.2079 5.2723C16.7159 3.6453 14.2209 3.5673 12.6339 5.0973C11.6109 6.0843 11.1769 7.5543 11.4939 8.9573C8.14293 9.1963 5.84193 7.6083 3.94993 5.4313C3.70593 5.1483 3.25293 5.2973 3.20193 5.6713C2.92193 7.7533 2.83393 12.8153 7.84993 15.7223C6.97893 16.9743 5.27393 17.7133 3.37593 18.0303C2.95593 18.1013 2.85593 18.6833 3.23993 18.8713C4.74393 19.6113 6.39693 19.9983 8.07693 19.9963" fill="#EAECF0" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@booknetic.com" aria-label="email">info@booknetic.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
