@@ -968,8 +968,13 @@ html {
 }
 
 .steps-graphics {
-    width: 960px;
+    width: 1078px;
     margin: 0 auto;
+}
+
+.steps-graphics img {
+    width: 100%;
+    height: auto;
 }
 
 .steps-labels {
