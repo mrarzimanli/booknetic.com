@@ -129,7 +129,7 @@
         }
     });
 
-    // Swiper JS - References
+    // Swiper JS - Testimonials
     let testimonialsSwiper = new Swiper(".testimonialsSwiper", {
         spaceBetween: 32,
         lazy: true,
@@ -169,6 +169,31 @@
             },
             992: {
                 slidesPerView: 3,
+            }
+        }
+    });
+
+    // Swiper JS - Roadmap
+    let roadmapSwiper = new Swiper(".roadmapSwiper", {
+        spaceBetween: 12,
+        resistanceRatio: 0,
+        initialSlide: 2,
+        navigation: {
+            nextEl: ".roadmap-wrapper .swiper-btn-next",
+            prevEl: ".roadmap-wrapper .swiper-btn-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: "auto",
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 4,
+            },
+            1200: {
+                slidesPerView: 6,
             }
         }
     });
