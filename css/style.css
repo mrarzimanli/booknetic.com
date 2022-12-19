@@ -849,7 +849,8 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    bottom: 0;
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
@@ -874,7 +875,6 @@ html {
     min-width: 320px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     height: 100vh;
     background-color: var(--white);
     margin-right: auto;
