@@ -19,7 +19,9 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="btn-close-modal" aria-label="Close">
-                        <img src="icons/x.svg" alt="close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -44,7 +46,9 @@
                 <div class="modal-header">
                     <span>Modal header</span>
                     <button type="button" class="btn-close-modal" aria-label="Close">
-                        <img src="icons/x.svg" alt="close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -63,7 +67,7 @@
                     <a href="index.html" class="header-logo">
                         <img src="images/logo-light.svg" alt="Booknetic" width="150" height="32">
                     </a>
-                    <nav class="header-menu">
+                    <nav class="header-menu d-none d-xl-flex">
                         <ul>
                             <li>
                                 <div class="header-menu-item">
@@ -160,7 +164,127 @@
                     </nav>
                 </div>
                 <div class="header-right">
-                    <div class="btns-wrapper">
+                    <div class="btns-wrapper d-none d-md-flex">
+                        <button class="btn-general secondary small btn-show-modal" data-target="#try-demo-modal">Try Demo</button>
+                        <a href="#" class="btn-general primary small" target="_blank">Buy Booknetic</a>
+                    </div>
+                    <button id="btn-mobile-menu-show" class="d-xl-none">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12H21M3 6H21M3 18H21" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <div class="mobile-menu-content">
+                    <div class="mobile-menu-header">
+                        <a href="index.html" class="header-logo-mobile">
+                            <img src="images/logo-light.svg" alt="Booknetic" width="150" height="32">
+                        </a>
+                        <button id="btn-mobile-menu-close" aria-label="close">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18M6 6L18 18" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mobile-menu-body">
+                        <nav class="header-menu mobile">
+                            <ul>
+                                <li>
+                                    <div class="header-menu-item">
+                                        <span>Products</span>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="header-menu-dropdown">
+                                        <div class="dropdown-menu">
+                                            <ul class="dropdown-menu-list">
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="icons/clock.svg" alt="Appointment booking">
+                                                        <span>Appointment booking</span>
+                                                        <div class="dropdown-menu-item-label"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="icons/clock.svg" alt="Appointment booking">
+                                                        <span>Appointment booking</span>
+                                                        <div class="label">Soon</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="icons/clock.svg" alt="Appointment booking">
+                                                        <span>Appointment booking</span>
+                                                        <div class="label">Soon</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="dropdown-menu-footer">
+                                                <a class="btn-text primary" href="#">
+                                                    <span>See all features</span>
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.16663 9.99984H15.8333M15.8333 9.99984L9.99996 4.1665M15.8333 9.99984L9.99996 15.8332" stroke="#7A5AF8" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="header-menu-item">
+                                        <span>Features</span>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="header-menu-dropdown">
+                                        <div class="dropdown-menu">
+                                            <ul class="dropdown-menu-list">
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="icons/clock.svg" alt="Appointment booking">
+                                                        <span>Appointment booking</span>
+                                                        <div class="dropdown-menu-item-label"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="icons/clock.svg" alt="Appointment booking">
+                                                        <span>Appointment booking</span>
+                                                        <div class="label">Soon</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="icons/clock.svg" alt="Appointment booking">
+                                                        <span>Appointment booking</span>
+                                                        <div class="label">Soon</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="dropdown-menu-footer">
+                                                <a class="btn-text primary" href="#">
+                                                    <span>See all features</span>
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.16663 9.99984H15.8333M15.8333 9.99984L9.99996 4.1665M15.8333 9.99984L9.99996 15.8332" stroke="#7A5AF8" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="header-menu-item" href="pricing.html">
+                                        <span>Pricing</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu-footer d-md-none">
                         <button class="btn-general secondary small btn-show-modal" data-target="#try-demo-modal">Try Demo</button>
                         <a href="#" class="btn-general primary small" target="_blank">Buy Booknetic</a>
                     </div>
@@ -175,12 +299,16 @@
                     <div class="welcome-text">
                         <h1>WordPress Appointment <span class="gradient-keyword">Booking</span> Plugin</h1>
                         <p>Booknetic is the best appointment scheduling plugin for WordPress that allows customization and automation of online bookings.</p>
-                        <div class="form-general">
+                        <div class="form-general d-none d-sm-flex">
                             <div>
                                 <input type="email" placeholder="Enter your email">
                                 <p>Create your free sandbox account and enjoy testing</p>
                             </div>
                             <button class="btn-general primary large">Try Demo</button>
+                        </div>
+                        <div class="btns-wrapper d-flex d-sm-none">
+                            <a href="#" class="btn-general primary large" target="_blank">Buy Booknetic</a>
+                            <button class="btn-general large btn-show-modal" data-target="#try-demo-modal">Try Demo</button>
                         </div>
                     </div>
                     <div class="welcome-image">
@@ -191,7 +319,7 @@
         </section>
         <section class="partners">
             <div class="container">
-                <div class="partners-content content-box-lg">
+                <div class="partners-content">
                     <div>
                         <img src="images/partners/envato.svg" alt="envato">
                     </div>
@@ -218,7 +346,8 @@
                         <p>With a simple 3 step installation process and a helpful setup wizard, you will get ready to accept bookings in no time.</p>
                     </div>
                     <div class="steps-graphics">
-                        <img src="images/how-it-works.svg" alt="how it works">
+                        <img class="d-none d-lg-block" src="images/how-it-works.svg" alt="how it works">
+                        <img class="d-lg-none" src="images/how-it-works-mobile.svg" alt="how it works">
                     </div>
                 </div>
             </div>
@@ -280,6 +409,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="features-text-footer">
+                                    <a href="#" class="btn-general primary">
+                                        <span>See all features</span>
+                                    </a>
+                                </div>
                             </div>
                             <div class="col-lg-6 d-none d-lg-flex">
                                 <div class="features-image-wrapper">
@@ -340,8 +474,8 @@
                         <p>Booknetic WordPress appointment booking plugin matches the booking needs of</p>
                     </div>
                     <div class="business-wrapper">
-                        <div class="row gx-5 gy-6">
-                            <div class="col-lg-3 d-flex">
+                        <div class="row gx-4 gy-5 gx-md-5 gy-xl-6">
+                            <div class="col-sm-6 col-lg-4 col-xl-3 d-flex">
                                 <div class="business-item">
                                     <div>
                                         <img src="images/business/1.png" alt="Gym, Sport, and Fitness">
@@ -349,7 +483,7 @@
                                     <h5>Gym, Sport, and Fitness</h5>
                                 </div>
                             </div>
-                            <div class="col-lg-3 d-flex">
+                            <div class="col-sm-6 col-lg-4 col-xl-3 d-flex">
                                 <div class="business-item">
                                     <div>
                                         <img src="images/business/2.png" alt="Gym, Sport, and Fitness">
@@ -357,7 +491,7 @@
                                     <h5>Gym, Sport, and Fitness</h5>
                                 </div>
                             </div>
-                            <div class="col-lg-3 d-flex">
+                            <div class="col-sm-6 col-lg-4 col-xl-3 d-flex">
                                 <div class="business-item">
                                     <div>
                                         <img src="images/business/1.png" alt="Gym, Sport, and Fitness">
@@ -365,7 +499,7 @@
                                     <h5>Gym, Sport, and Fitness</h5>
                                 </div>
                             </div>
-                            <div class="col-lg-3 d-flex">
+                            <div class="col-sm-6 col-lg-4 col-xl-3 d-flex">
                                 <div class="business-item">
                                     <div>
                                         <img src="images/business/2.png" alt="Gym, Sport, and Fitness">
@@ -373,7 +507,7 @@
                                     <h5>Gym, Sport, and Fitness</h5>
                                 </div>
                             </div>
-                            <div class="col-lg-3 d-flex">
+                            <div class="col-sm-6 col-lg-4 col-xl-3 d-flex">
                                 <div class="business-item">
                                     <div>
                                         <img src="images/business/1.png" alt="Gym, Sport, and Fitness">
@@ -381,7 +515,7 @@
                                     <h5>Gym, Sport, and Fitness</h5>
                                 </div>
                             </div>
-                            <div class="col-lg-3 d-flex">
+                            <div class="col-sm-6 col-lg-4 col-xl-3 d-flex">
                                 <div class="business-item">
                                     <div>
                                         <img src="images/business/2.png" alt="Gym, Sport, and Fitness">
@@ -389,7 +523,7 @@
                                     <h5>Gym, Sport, and Fitness</h5>
                                 </div>
                             </div>
-                            <div class="col-lg-3 d-flex">
+                            <div class="col-sm-6 col-lg-4 col-xl-3 d-flex">
                                 <div class="business-item">
                                     <div>
                                         <img src="images/business/1.png" alt="Gym, Sport, and Fitness">
@@ -397,7 +531,7 @@
                                     <h5>Gym, Sport, and Fitness</h5>
                                 </div>
                             </div>
-                            <div class="col-lg-3 d-flex">
+                            <div class="col-sm-6 col-lg-4 col-xl-3 d-flex">
                                 <div class="business-item">
                                     <div>
                                         <img src="images/business/2.png" alt="Gym, Sport, and Fitness">
@@ -426,8 +560,8 @@
                         <p>Booknetic addons to maximize your appointment process efficiency</p>
                     </div>
                     <div class="addons-wrapper">
-                        <div class="row gx-5 gy-6">
-                            <div class="col-lg-4 d-flex">
+                        <div class="row g-4 gx-xl-5 gy-xl-6">
+                            <div class="col-md-6 col-lg-4 d-flex">
                                 <div class="addons-item">
                                     <div>
                                         <img src="icons/zoom.svg" alt="Zoom Integration">
@@ -436,7 +570,7 @@
                                     <p>Built-in Zoom integration to support your business operations</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 d-flex">
+                            <div class="col-md-6 col-lg-4 d-flex">
                                 <div class="addons-item">
                                     <div>
                                         <img src="icons/g-calendar.svg" alt="Google Calendar 2-way Sync">
@@ -445,7 +579,7 @@
                                     <p>Effectively manage your schedule with shared calendar</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 d-flex">
+                            <div class="col-md-6 col-lg-4 d-flex">
                                 <div class="addons-item">
                                     <div>
                                         <img src="icons/logos_woocommerce-icon.svg" alt="WooCommerce Integration">
@@ -454,7 +588,7 @@
                                     <p>Integrate any payment gateways which is supported by WooCommerce</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 d-flex">
+                            <div class="col-md-6 col-lg-4 d-flex">
                                 <div class="addons-item">
                                     <div>
                                         <img src="icons/tag-03.svg" alt="Coupons">
@@ -463,7 +597,7 @@
                                     <p>Streamline coupons or discount offers from the appointment booking system</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 d-flex">
+                            <div class="col-md-6 col-lg-4 d-flex">
                                 <div class="addons-item">
                                     <div>
                                         <img src="icons/bar-chart-10.svg" alt="Reporting Module">
@@ -472,7 +606,7 @@
                                     <p>Anaylze the effectiveness of business operations by location, staff, services, and their earnings</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4 d-flex">
+                            <div class="col-md-6 col-lg-4 d-flex">
                                 <div class="addons-item">
                                     <div>
                                         <img src="icons/star-01.svg" alt="Ratings & Reviews">
@@ -499,7 +633,7 @@
                         <p>We take appointment bookings to the next levely</p>
                     </div>
                     <div class="advantages-wrapper">
-                        <div class="row gx-6">
+                        <div class="row gy-0 gy-sm-6">
                             <div class="col-lg-6">
                                 <div class="advantage-text">
                                     <div>
@@ -529,7 +663,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row gx-6">
+                        <div class="row gy-0 gy-sm-6">
                             <div class="col-lg-6">
                                 <div class="advantage-text">
                                     <div>
@@ -559,7 +693,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row gx-6">
+                        <div class="row gy-0 gy-sm-6">
                             <div class="col-lg-6">
                                 <div class="advantage-text">
                                     <div>
@@ -589,7 +723,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row gx-6">
+                        <div class="row gy-0 gy-sm-6">
                             <div class="col-lg-6">
                                 <div class="advantage-text">
                                     <div>
@@ -679,7 +813,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 d-none d-lg-block">
                                 <div class="news-image">
                                     <img src="images/hot-news.svg" alt="hots news">
                                 </div>
@@ -697,8 +831,8 @@
                         <p>Booknetic WordPress appointment booking plugin matches the booking needs of</p>
                     </div>
                     <div class="roadmap-info">
-                        <div class="row">
-                            <div class="col-lg-4 d-flex">
+                        <div class="row gy-5">
+                            <div class="col-6 col-lg-4 d-flex order-lg-1">
                                 <div class="roadmap-info-item left">
                                     <div>
                                         <span>Released</span>
@@ -707,18 +841,18 @@
                                     <span>56</span>
                                 </div>
                             </div>
-                            <div class="col-lg-4 d-flex">
-                                <div class="roadmap-info-item center">
-                                    <a href="#" class="btn-general primary" target="_blank">Suggest a feature</a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 d-flex">
+                            <div class="col-6 col-lg-4 d-flex order-lg-3">
                                 <div class="roadmap-info-item right">
                                     <div>
                                         <span>Planned</span>
                                         <span>Features</span>
                                     </div>
                                     <span>24</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex order-lg-2">
+                                <div class="roadmap-info-item center">
+                                    <a href="#" class="btn-general primary" target="_blank">Suggest a feature</a>
                                 </div>
                             </div>
                         </div>
@@ -728,7 +862,7 @@
             <div class="roadmap-wrapper">
                 <div class="swiper roadmapSwiper">
                     <div class="swiper-wrapper content-box-lg">
-                        <div class="swiper-slide done">
+                        <div class="swiper-slide done" data-index="0">
                             <div class="roadmap-box">
                                 <div class="circle"></div>
                                 <div class="message">
@@ -738,7 +872,7 @@
                                 <div class="v-line"></div>
                             </div>
                         </div>
-                        <div class="swiper-slide done">
+                        <div class="swiper-slide done" data-index="1">
                             <div class="roadmap-box">
                                 <div class="circle"></div>
                                 <div class="message">
@@ -748,7 +882,7 @@
                                 <div class="v-line"></div>
                             </div>
                         </div>
-                        <div class="swiper-slide done">
+                        <div class="swiper-slide done" data-index="2">
                             <div class="roadmap-box">
                                 <div class="circle"></div>
                                 <div class="message">
@@ -758,7 +892,7 @@
                                 <div class="v-line"></div>
                             </div>
                         </div>
-                        <div class="swiper-slide done">
+                        <div class="swiper-slide current" data-index="3">
                             <div class="roadmap-box">
                                 <div class="circle"></div>
                                 <div class="message">
@@ -768,7 +902,7 @@
                                 <div class="v-line"></div>
                             </div>
                         </div>
-                        <div class="swiper-slide current">
+                        <div class="swiper-slide done" data-index="4">
                             <div class="roadmap-box">
                                 <div class="circle"></div>
                                 <div class="message">
@@ -778,7 +912,7 @@
                                 <div class="v-line"></div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide " data-index="5">
                             <div class="roadmap-box">
                                 <div class="circle"></div>
                                 <div class="message">
@@ -788,7 +922,7 @@
                                 <div class="v-line"></div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-index="6">
                             <div class="roadmap-box">
                                 <div class="circle"></div>
                                 <div class="message">
@@ -798,7 +932,7 @@
                                 <div class="v-line"></div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-index="7">
                             <div class="roadmap-box">
                                 <div class="circle"></div>
                                 <div class="message">
@@ -808,11 +942,7 @@
                                 <div class="v-line"></div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="roadmap-box">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-index="8">
                             <div class="roadmap-box">
                                 <div class="circle"></div>
                                 <div class="message">
@@ -820,6 +950,50 @@
                                     <p>Streamline coupons or discount offers from the</p>
                                 </div>
                                 <div class="v-line"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-index="9">
+                            <div class="roadmap-box">
+                                <div class="circle"></div>
+                                <div class="message">
+                                    <span>Aug - Oct, 2022</span>
+                                    <p>Streamline coupons or discount offers from the</p>
+                                </div>
+                                <div class="v-line"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-index="10">
+                            <div class="roadmap-box">
+                                <div class="circle"></div>
+                                <div class="message">
+                                    <span>Aug - Oct, 2022</span>
+                                    <p>Streamline coupons or discount offers from the</p>
+                                </div>
+                                <div class="v-line"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-index="11">
+                            <div class="roadmap-box">
+                                <div class="circle"></div>
+                                <div class="message">
+                                    <span>Aug - Oct, 2022</span>
+                                    <p>Streamline coupons or discount offers from the</p>
+                                </div>
+                                <div class="v-line"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-index="12">
+                            <div class="roadmap-box">
+                                <div class="circle"></div>
+                                <div class="message">
+                                    <span>Aug - Oct, 2022</span>
+                                    <p>Streamline coupons or discount offers from the</p>
+                                </div>
+                                <div class="v-line"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-index="13">
+                            <div class="roadmap-box">
                             </div>
                         </div>
                     </div>
@@ -841,6 +1015,7 @@
                 <div class="references-content content-box-lg">
                     <div class="section-header">
                         <h3>Talks about the Booknetic</h3>
+                        <p>Booknetic addons to maximize your appointment process efficiency</p>
                     </div>
                     <div class="references-wrapper">
                         <div class="swiper referencesSwiper">
@@ -941,6 +1116,7 @@
                                     </a>
                                 </div>
                             </div>
+                            <div class="swiper-pagination"></div>
                         </div>
                         <div class="swiper-btn-next">
                             <img data-src="icons/angle-right.svg" class="lazyload" alt="angle right">
@@ -1092,7 +1268,7 @@
         <section class="subscribe">
             <div class="container">
                 <div class="subscribe-content content-box-lg">
-                    <div class="row">
+                    <div class="row gy-5">
                         <div class="col-lg-6">
                             <div class="section-header">
                                 <h2>Sign up for our newsletter</h2>
@@ -1103,9 +1279,10 @@
                             <div class="form-general small">
                                 <div>
                                     <input type="email" placeholder="Enter your email">
-                                    <p>We care about your data in our <a href="#">privacy policy</a>.</p>
+                                    <p class="d-none s-sm-block">We care about your data in our <a href="#">privacy policy</a>.</p>
                                 </div>
-                                <button class="btn-general primary small">Try Demo</button>
+                                <button class="btn-general primary">Try Demo</button>
+                                <p class="d-sm-none">We care about your data in our <a href="#">privacy policy</a>.</p>
                             </div>
                         </div>
                     </div>
@@ -1118,10 +1295,10 @@
                     <div class="section-header">
                         <span>It is very <span class="gradient-keyword">comfortable</span>. Yes?</span>
                         <p>Booknetic is a simple yet powerful plugin for accepting online bookings & payments on your WordPress site.</p>
-                        <div class="btns-wrapper">
-                            <a href="#" class="btn-general" target="_blank">Try Demo</a>
-                            <a href="#" class="btn-general primary" target="_blank">Buy now $79</a>
-                        </div>
+                    </div>
+                    <div class="btns-wrapper">
+                        <a href="#" class="btn-general" target="_blank">Try Demo</a>
+                        <a href="#" class="btn-general primary" target="_blank">Buy now $79</a>
                     </div>
                 </div>
             </div>
@@ -1130,8 +1307,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content content-box-md">
-                <div class="row g-5">
-                    <div class="col-lg">
+                <div class="row gx-5 gy-6">
+                    <div class="col-sm-6 col-lg">
                         <div class="footer-item">
                             <span>Product</span>
                             <ul>
@@ -1179,7 +1356,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg">
+                    <div class="col-sm-6 col-lg">
                         <div class="footer-item custom-size">
                             <span>Navigation</span>
                             <ul>
@@ -1233,7 +1410,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-sm-6 col-lg-3">
                         <div class="footer-item">
                             <span>Popular features</span>
                             <ul>
@@ -1290,7 +1467,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-sm-6 col-lg-3">
                         <div class="footer-item">
                             <span>Popular integrations</span>
                             <ul>

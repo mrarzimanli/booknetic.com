@@ -20,6 +20,78 @@
         })
     });
 
+    // Fixed header
+    let scrollUp = "scroll-up";
+    let scrollDown = "scroll-down";
+    let body = document.body;
+    let headerHeight = document.querySelector('.header').offsetHeight;
+    let lastScroll = 0;
+
+    let currentScroll = window.pageYOffset;
+    if (currentScroll >= headerHeight) {
+        body.classList.add(scrollUp);
+    }
+
+    window.addEventListener("scroll", () => {
+        let currentScroll = window.pageYOffset;
+        if (currentScroll <= headerHeight) {
+            body.classList.remove(scrollUp);
+            return
+        }
+
+        if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+            body.classList.remove(scrollUp);
+            body.classList.add(scrollDown);
+        } else if (currentScroll < lastScroll && body.classList.contains(scrollDown)) {
+            body.classList.remove(scrollDown);
+            body.classList.add(scrollUp);
+        }
+        lastScroll = currentScroll;
+    });
+
+    // Mobile menu
+    let menuOpenBtn = document.getElementById('btn-mobile-menu-show')
+    let menuCloseBtn = document.getElementById('btn-mobile-menu-close')
+    let mobileMenu = document.querySelector('.mobile-menu')
+    let mobileMenuContent = document.querySelector('.mobile-menu-content')
+
+    menuOpenBtn && menuOpenBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('show')
+        body.classList.add('overflow-hidden')
+    });
+
+    menuCloseBtn && menuCloseBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('show')
+        body.classList.remove('overflow-hidden')
+    });
+
+    mobileMenu && mobileMenu.addEventListener('click', (e) => {
+        if (!mobileMenuContent.contains(e.target)) {
+            mobileMenu.classList.remove('show')
+            body.classList.remove('overflow-hidden')
+        }
+    })
+
+    const mobileMenuItems = document.querySelectorAll('.header-menu.mobile>ul>li')
+    mobileMenuItems && Array.from(mobileMenuItems).forEach(mobileMenuItem => {
+        mobileMenuItem.addEventListener('click', () => {
+            const mobileMenuDropdown = mobileMenuItem.querySelector('.header-menu-dropdown')
+            const activeMobileMenuItem = document.querySelector('.header-menu.mobile>ul>li.active')
+            const activeMobileMenuDropdown = activeMobileMenuItem && activeMobileMenuItem.querySelector('.header-menu-dropdown')
+
+            if (mobileMenuItem.classList.contains('active')) {
+                mobileMenuItem.classList.remove('active')
+                slideUp(mobileMenuDropdown)
+            } else {
+                activeMobileMenuItem && activeMobileMenuItem.classList.remove('active')
+                activeMobileMenuDropdown && slideUp(activeMobileMenuDropdown)
+                mobileMenuItem.classList.add('active')
+                slideDown(mobileMenuDropdown)
+            }
+
+        })
+    });
+
     // Features
     const activeFeatureItem = document.querySelector('.feature-text-item.active')
     const activeFeatureItemBody = activeFeatureItem && activeFeatureItem.querySelector('.feature-text-item-body')
@@ -90,7 +162,7 @@
     });
 
     // Swiper JS - References
-    let referencesSwiper = new Swiper(".referencesSwiper", {
+    const referencesSwiper = new Swiper(".referencesSwiper", {
         spaceBetween: 32,
         lazy: true,
         autoplay: {
@@ -104,15 +176,18 @@
         },
         breakpoints: {
             0: {
-                spaceBetween: 16,
                 slidesPerView: "auto",
-                pagination: false,
+                spaceBetween: 24,
                 navigation: false,
                 preloadImages: false,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
                 lazy: {
                     enabled: true,
                     loadPrevNext: true,
-                    loadPrevNextAmount: 2
+                    loadPrevNextAmount: 3
                 },
                 autoplay: {
                     pauseOnMouseEnter: true,
@@ -120,17 +195,14 @@
                     delay: 2000,
                 },
             },
-            768: {
-                slidesPerView: 2,
-            },
-            992: {
+            1200: {
                 slidesPerView: 3,
             }
         }
     });
 
     // Swiper JS - Testimonials
-    let testimonialsSwiper = new Swiper(".testimonialsSwiper", {
+    const testimonialsSwiper = new Swiper(".testimonialsSwiper", {
         spaceBetween: 32,
         lazy: true,
         autoplay: {
@@ -148,15 +220,14 @@
         },
         breakpoints: {
             0: {
-                spaceBetween: 16,
                 slidesPerView: "auto",
-                pagination: false,
+                spaceBetween: 24,
                 navigation: false,
                 preloadImages: false,
                 lazy: {
                     enabled: true,
                     loadPrevNext: true,
-                    loadPrevNextAmount: 2
+                    loadPrevNextAmount: 3
                 },
                 autoplay: {
                     pauseOnMouseEnter: true,
@@ -164,39 +235,37 @@
                     delay: 2000,
                 },
             },
-            768: {
-                slidesPerView: 2,
-            },
-            992: {
+            1200: {
                 slidesPerView: 3,
             }
         }
     });
 
+    const swiperBreakpoints = {
+        0: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 4,
+        },
+        1200: {
+            slidesPerView: 6,
+        }
+    }
+
     // Swiper JS - Roadmap
-    let roadmapSwiper = new Swiper(".roadmapSwiper", {
+    const roadmapSwiper = new Swiper(".roadmapSwiper", {
         spaceBetween: 12,
         resistanceRatio: 0,
-        initialSlide: 2,
         navigation: {
             nextEl: ".roadmap-wrapper .swiper-btn-next",
             prevEl: ".roadmap-wrapper .swiper-btn-prev",
         },
-        breakpoints: {
-            0: {
-                slidesPerView: "auto",
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            992: {
-                slidesPerView: 4,
-            },
-            1200: {
-                slidesPerView: 6,
-            }
-        }
+        breakpoints: swiperBreakpoints
     });
+
+    const currenRoadmapIndex = document.querySelector('.roadmapSwiper .swiper-slide.current').getAttribute('data-index')
+    roadmapSwiper.slideTo(currenRoadmapIndex - (swiperBreakpoints[roadmapSwiper.currentBreakpoint].slidesPerView - 2) / 2)
 
     // Function lazyload
     function lazyload() {

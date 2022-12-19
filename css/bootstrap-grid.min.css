@@ -696,10 +696,18 @@ progress {
 }
 
 .g-5, .gx-5 {
-    --bs-gutter-x: 3rem
+    --bs-gutter-x: 2rem
 }
 
 .g-5, .gy-5 {
+    --bs-gutter-y: 2rem
+}
+
+.g-6, .gx-6 {
+    --bs-gutter-x: 3rem
+}
+
+.g-6, .gy-6 {
     --bs-gutter-y: 3rem
 }
 
@@ -897,10 +905,18 @@ progress {
     }
 
     .g-sm-5, .gx-sm-5 {
-        --bs-gutter-x: 3rem
+        --bs-gutter-x: 2rem
     }
 
     .g-sm-5, .gy-sm-5 {
+        --bs-gutter-y: 2rem
+    }
+
+    .g-sm-6, .gx-sm-6 {
+        --bs-gutter-x: 3rem
+    }
+
+    .g-sm-6, .gy-sm-6 {
         --bs-gutter-y: 3rem
     }
 }
@@ -1099,10 +1115,18 @@ progress {
     }
 
     .g-md-5, .gx-md-5 {
-        --bs-gutter-x: 3rem
+        --bs-gutter-x: 2rem
     }
 
     .g-md-5, .gy-md-5 {
+        --bs-gutter-y: 2rem
+    }
+
+    .g-md-6, .gx-md-6 {
+        --bs-gutter-x: 2rem
+    }
+
+    .g-md-6, .gy-md-6 {
         --bs-gutter-y: 3rem
     }
 }
@@ -1301,10 +1325,18 @@ progress {
     }
 
     .g-lg-5, .gx-lg-5 {
-        --bs-gutter-x: 3rem
+        --bs-gutter-x: 2rem
     }
 
     .g-lg-5, .gy-lg-5 {
+        --bs-gutter-y: 2rem
+    }
+
+    .g-lg-6, .gx-lg-6 {
+        --bs-gutter-x: 3rem
+    }
+
+    .g-lg-6, .gy-lg-6 {
         --bs-gutter-y: 3rem
     }
 }
@@ -1503,10 +1535,18 @@ progress {
     }
 
     .g-xl-5, .gx-xl-5 {
-        --bs-gutter-x: 3rem
+        --bs-gutter-x: 2rem
     }
 
     .g-xl-5, .gy-xl-5 {
+        --bs-gutter-y: 2rem
+    }
+
+    .g-xl-6, .gx-xl-6 {
+        --bs-gutter-x: 3rem
+    }
+
+    .g-xl-6, .gy-xl-6 {
         --bs-gutter-y: 3rem
     }
 }
@@ -1705,11 +1745,19 @@ progress {
     }
 
     .g-xxl-5, .gx-xxl-5 {
-        --bs-gutter-x: 3rem
+        --bs-gutter-x: 2rem
     }
 
     .g-xxl-5, .gy-xxl-5 {
-        --bs-gutter-y: 3rem
+        --bs-gutter-y: 2rem
+    }
+
+    .g-xxl-6, .gx-xxl-6 {
+        --bs-gutter-x: 4rem
+    }
+
+    .g-xxl-6, .gy-xxl-6 {
+        --bs-gutter-y: 4rem
     }
 }
 
