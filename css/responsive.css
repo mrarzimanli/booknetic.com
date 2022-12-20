@@ -341,7 +341,7 @@
     }
 
     .business-item>div {
-        height: 220px;
+        height: 162px;
         margin-bottom: 16px;
     }
 
@@ -394,6 +394,12 @@
 
     .roadmap-info-item.center {
         align-items: stretch;
+    }
+
+    .roadmap-info-item>span {
+        font-size: 48px;
+        line-height: 60px;
+        margin-bottom: 8px;
     }
 
     .roadmap-wrapper .swiper-btn-next, .roadmap-wrapper .swiper-btn-prev {
