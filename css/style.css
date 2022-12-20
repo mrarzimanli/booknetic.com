@@ -1603,7 +1603,7 @@ html {
 }
 
 .swiper-slide.current .roadmap-box:before {
-    background-color: var(--purple-500);
+    background-color: var(--green);
 }
 
 .roadmap-box .circle {

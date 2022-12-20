@@ -489,6 +489,10 @@
     }
 
     /* Footer */
+    .footer-item>ul li a {
+        font-size: var(--fs-b4);
+        line-height: var(--lh-b4)
+    }
     .copyright {
         margin-top: 48px;
     }
