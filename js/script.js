@@ -24,7 +24,6 @@
     let scrollUp = "scroll-up";
     let scrollDown = "scroll-down";
     let body = document.body;
-    let html = document.querySelector('html');
     let headerHeight = document.querySelector('.header').offsetHeight;
     let lastScroll = 0;
 
@@ -59,19 +58,16 @@
     menuOpenBtn && menuOpenBtn.addEventListener('click', () => {
         mobileMenu.classList.add('show')
         body.classList.add('overflow-hidden')
-        html.style.overflow = "hidden";
     });
 
     menuCloseBtn && menuCloseBtn.addEventListener('click', () => {
         mobileMenu.classList.remove('show')
         body.classList.remove('overflow-hidden')
-        html.style.overflow = "auto";
     });
 
     mobileMenu && mobileMenu.addEventListener('click', (e) => {
         if (!mobileMenuContent.contains(e.target)) {
             mobileMenu.classList.remove('show')
-            html.style.overflow = "auto";
             body.classList.remove('overflow-hidden')
         }
     })
