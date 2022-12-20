@@ -851,7 +851,6 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     background: rgba(0, 0, 0, 0.7);
@@ -862,7 +861,6 @@ html {
 }
 
 .mobile-menu.show {
-    left: 0;
     opacity: 1;
     visibility: visible;
 }
@@ -871,11 +869,11 @@ html {
     position: fixed;
     top: 0;
     left: -100%;
+    bottom: 0;
     width: 80%;
     min-width: 320px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     background-color: var(--white);
     margin-right: auto;
     transition: all 250ms ease-in-out;
