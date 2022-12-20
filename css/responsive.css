@@ -167,6 +167,10 @@
         padding-bottom: 64px;
     }
 
+    .modal-dialog {
+        max-width: 520px;
+    }
+
     /* Header */
     .header {
         padding: 16px 0;
@@ -248,6 +252,7 @@
     }
 
     .form-general>div {
+        height: 48px;
         max-width: none;
     }
 
@@ -264,6 +269,28 @@
     .btns-wrapper>*:not(:last-child) {
         margin-right: 0;
         margin-bottom: 12px;
+    }
+
+    .modal-dialog {
+        height: calc(100% - 24px);
+        max-width: calc(100% - 24px);
+        margin: 12px auto;
+    }
+
+    .modal-header {
+        margin-bottom: 4px;
+    }
+
+    .modal-footer {
+        margin-top: 4px;
+    }
+
+    .modal-header, .modal-body, .modal-footer {
+        padding: 8px;
+    }
+
+    #try-demo-modal .form-general {
+        margin-top: 16px;
     }
 
     /* Header */

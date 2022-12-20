@@ -515,7 +515,7 @@ html {
     position: relative;
     display: flex;
     align-items: center;
-    width: auto;
+    width: 100%;
     height: calc(100% - 48px);
     pointer-events: none;
     max-width: 564px;
