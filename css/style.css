@@ -1299,6 +1299,11 @@ main {
     border-radius: var(--br-16);
     flex-grow: 1;
     overflow: hidden;
+    transition: all 250ms ease-in-out;
+}
+
+.addons-item:hover {
+    box-shadow: 0px 0px 10px rgba(109, 47, 253, 0.2);
 }
 
 .addons-item .addons-item-header {

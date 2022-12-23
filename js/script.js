@@ -284,13 +284,24 @@
         fitRows: {
             equalheight: true
         },
+        filter: function (elem) {
+            let searchResult = qsRegex ? elem.querySelector('.addons-item-body').textContent.match(qsRegex) : true
+            let buttonResult = buttonFilter ? elem.matches(buttonFilter) : true;
+            return searchResult && buttonResult
+        }
     });
+
+    // store filter for each group
+    var buttonFilters = {};
+    var buttonFilter;
 
     // filter functions
     let filterFns = {
         // search via text content
         search: function (elem) {
-            return qsRegex ? elem.querySelector('.addons-item-body').textContent.match(qsRegex) : true
+            let searchResult = qsRegex ? elem.querySelector('.addons-item-body').textContent.match(qsRegex) : true
+            let buttonResult = buttonFilter ? elem.matches(buttonFilter) : true;
+            return searchResult && buttonResult
         }
     };
 
@@ -301,10 +312,10 @@
             if (!filtersBtn.classList.contains('primary')) {
                 document.querySelector('.filters-button-group button.primary').classList.remove('primary')
                 filtersBtn.classList.add('primary')
-                let filterValue = filtersBtn.getAttribute('data-filter')
-                quicksearchInput.value = ""
-                quicksearchInput.closest('.search').classList.remove('active')
-                iso.arrange({ filter: filterValue })
+                let filterGroup = filtersBtn.closest('.filters-button-group').getAttribute('data-filter-group')
+                buttonFilters[filterGroup] = filtersBtn.getAttribute('data-filter')
+                buttonFilter = concatValues(buttonFilters);
+                iso.arrange()
             }
         });
     })
@@ -313,7 +324,7 @@
     let quicksearchInput = document.querySelector('.quicksearch')
     let quicksearch = debounce(function () {
         qsRegex = new RegExp(quicksearchInput.value, 'gi')
-        iso.arrange({ filter: filterFns.search })
+        iso.arrange()
     }, 200)
     quicksearchInput && quicksearchInput.addEventListener('keyup', () => {
         if (quicksearchInput.value) {
@@ -322,18 +333,16 @@
         else {
             quicksearchInput.closest('.search').classList.remove('active')
         }
-        document.querySelector('.filters-button-group button.primary').classList.remove('primary')
-        document.querySelector('.filters-button-group button[data-filter="*"]').classList.add('primary')
         quicksearch()
     })
 
     // Clear isotope search
     const btnClearFilter = document.querySelector('.clear-filter')
     btnClearFilter && btnClearFilter.addEventListener('click', () => {
-        let activeFilterValue = document.querySelector('.filters-button-group button.primary').getAttribute('data-filter')
         quicksearchInput.value = ""
         quicksearchInput.closest('.search').classList.remove('active')
-        iso.arrange({ filter: activeFilterValue })
+        qsRegex = null
+        iso.arrange()
     })
 
     // debounce so filtering doesn't happen every millisecond
@@ -349,6 +358,15 @@
             }
             timeout = setTimeout(delayed, threshold);
         };
+    }
+
+    // flatten object by concatting values
+    function concatValues(obj) {
+        var value = '';
+        for (var prop in obj) {
+            value += obj[prop];
+        }
+        return value;
     }
 
     // Function lazyload
