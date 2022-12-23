@@ -302,6 +302,8 @@
                 document.querySelector('.filters-button-group button.primary').classList.remove('primary')
                 filtersBtn.classList.add('primary')
                 let filterValue = filtersBtn.getAttribute('data-filter')
+                quicksearchInput.value = ""
+                quicksearchInput.closest('.search').classList.remove('active')
                 iso.arrange({ filter: filterValue })
             }
         });
@@ -320,6 +322,8 @@
         else {
             quicksearchInput.closest('.search').classList.remove('active')
         }
+        document.querySelector('.filters-button-group button.primary').classList.remove('primary')
+        document.querySelector('.filters-button-group button[data-filter="*"]').classList.add('primary')
         quicksearch()
     })
 
