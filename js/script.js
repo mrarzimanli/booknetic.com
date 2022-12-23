@@ -100,8 +100,8 @@
     const activeFeatureItem = document.querySelector('.feature-text-item.active')
     const activeFeatureItemBody = activeFeatureItem && activeFeatureItem.querySelector('.feature-text-item-body')
     const activeFeatureImage = activeFeatureItem && document.querySelector(activeFeatureItem.getAttribute('data-target'))
-    slideDown(activeFeatureItemBody)
-    slideDown(activeFeatureImage)
+    activeFeatureItemBody && slideDown(activeFeatureItemBody)
+    activeFeatureImage && slideDown(activeFeatureImage)
 
     const featureItems = document.querySelectorAll('.feature-text-item')
     featureItems && Array.from(featureItems).forEach(featureItem => {
@@ -268,8 +268,84 @@
         breakpoints: swiperBreakpoints
     });
 
-    const currenRoadmapIndex = document.querySelector('.roadmapSwiper .swiper-slide.current').getAttribute('data-index')
-    roadmapSwiper.slideTo(currenRoadmapIndex - (swiperBreakpoints[roadmapSwiper.currentBreakpoint].slidesPerView - 2) / 2)
+    const currenRoadmapItem = document.querySelector('.roadmapSwiper .swiper-slide.current')
+    const currenRoadmapItemIndex = currenRoadmapItem && currenRoadmapItem.getAttribute('data-index')
+    currenRoadmapItemIndex && roadmapSwiper.slideTo(currenRoadmapItemIndex - (swiperBreakpoints[roadmapSwiper.currentBreakpoint].slidesPerView - 2) / 2)
+
+    // Features isotope
+    // quick search regex
+    let qsRegex;
+
+    // init isotope
+    const elem = document.querySelector('.isotope-grid');
+    const iso = new Isotope(elem, {
+        itemSelector: '.isotope-grid-item',
+        layoutMode: 'fitRows',
+        fitRows: {
+            equalheight: true
+        },
+    });
+
+    // filter functions
+    let filterFns = {
+        // search via text content
+        search: function (elem) {
+            return qsRegex ? elem.querySelector('.addons-item-body').textContent.match(qsRegex) : true
+        }
+    };
+
+    // bind filter button click
+    let filtersBtns = Array.from(document.querySelectorAll('.filters-button-group button'))
+    filtersBtns && filtersBtns.forEach((filtersBtn) => {
+        filtersBtn.addEventListener('click', () => {
+            if (!filtersBtn.classList.contains('primary')) {
+                document.querySelector('.filters-button-group button.primary').classList.remove('primary')
+                filtersBtn.classList.add('primary')
+                let filterValue = filtersBtn.getAttribute('data-filter')
+                iso.arrange({ filter: filterValue })
+            }
+        });
+    })
+
+    // use value of search field to filter
+    let quicksearchInput = document.querySelector('.quicksearch')
+    let quicksearch = debounce(function () {
+        qsRegex = new RegExp(quicksearchInput.value, 'gi')
+        iso.arrange({ filter: filterFns.search })
+    }, 200)
+    quicksearchInput && quicksearchInput.addEventListener('keyup', () => {
+        if (quicksearchInput.value) {
+            quicksearchInput.closest('.search').classList.add('active')
+        }
+        else {
+            quicksearchInput.closest('.search').classList.remove('active')
+        }
+        quicksearch()
+    })
+
+    // Clear isotope search
+    const btnClearFilter = document.querySelector('.clear-filter')
+    btnClearFilter && btnClearFilter.addEventListener('click', () => {
+        let activeFilterValue = document.querySelector('.filters-button-group button.primary').getAttribute('data-filter')
+        quicksearchInput.value = ""
+        quicksearchInput.closest('.search').classList.remove('active')
+        iso.arrange({ filter: activeFilterValue })
+    })
+
+    // debounce so filtering doesn't happen every millisecond
+    function debounce(fn, threshold) {
+        let timeout;
+        threshold = threshold || 100;
+        return function debounced() {
+            clearTimeout(timeout);
+            let args = arguments;
+            let _this = this;
+            function delayed() {
+                fn.apply(_this, args);
+            }
+            timeout = setTimeout(delayed, threshold);
+        };
+    }
 
     // Function lazyload
     function lazyload() {

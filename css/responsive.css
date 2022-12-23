@@ -1,16 +1,16 @@
 @media (max-width: 1399px) {
 
     /* Welcome */
-    .welcome-text {
+    .home-welcome-text {
         margin-right: 0;
     }
 
-    .welcome-image {
+    .home-welcome-image {
         flex-shrink: 0;
         max-width: 610px;
     }
 
-    .welcome-image img {
+    .home-welcome-image img {
         transform: translateX(36px);
     }
 
@@ -29,26 +29,30 @@
 @media (max-width: 1199px) {
 
     /* Welcome */
-    .welcome {
+    .home-welcome .content-box-lg {
         padding-bottom: 0;
     }
 
-    .welcome-content {
+    .home-welcome-content {
         flex-direction: column;
     }
 
-    .welcome-text {
+    .home-welcome-text {
         align-items: center;
         text-align: center;
         margin-bottom: 48px;
     }
 
-    .welcome-image {
+    .home-welcome-text>p {
+        max-width: 620px;
+    }
+
+    .home-welcome-image {
         max-width: 100%;
         margin: 0 auto;
     }
 
-    .welcome-image img {
+    .home-welcome-image img {
         transform: none;
     }
 
@@ -138,6 +142,22 @@
     .footer-item.custom-size {
         padding: 0;
     }
+
+    /* Features Page */
+    .features-welcome-content {
+        flex-direction: column;
+    }
+
+    .features-welcome-text {
+        margin-right: 0;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    .features-welcome-text>p {
+        max-width: 620px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -171,6 +191,10 @@
         max-width: 520px;
     }
 
+    main {
+        padding-top: 72px;
+    }
+
     /* Header */
     .header {
         padding: 16px 0;
@@ -191,11 +215,6 @@
     #btn-mobile-menu-show, #btn-mobile-menu-close {
         width: 40px;
         height: 40px;
-    }
-
-    /* Welcome */
-    .welcome {
-        padding-top: 136px;
     }
 
     /* Partners */
@@ -267,7 +286,7 @@
     }
 
     .btns-wrapper>*:not(:last-child) {
-        margin-right: 0;
+        margin-right: 0 !important;
         margin-bottom: 12px;
     }
 
@@ -294,6 +313,14 @@
     }
 
     /* Header */
+    .header-menu>ul>li:hover .header-menu-item span {
+        color: var(--gray-600);
+    }
+
+    .header-menu>ul>li:hover .header-menu-item svg path {
+        stroke: var(--gray-600);
+    }
+
     .dropdown-menu-list {
         padding: 12px 0;
     }
@@ -307,19 +334,14 @@
     }
 
     /* Welcome */
-    .welcome-text {
+    .home-welcome-text {
         align-items: stretch;
         text-align: left;
         margin-bottom: 32px;
     }
 
-    .welcome-text .btns-wrapper {
+    .home-welcome-text .btns-wrapper {
         margin-top: 32px;
-    }
-
-    .welcome-text .btns-wrapper>*:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 12px;
     }
 
     /* Partners */
@@ -375,21 +397,19 @@
     /* Add-ons */
     .addons-item {
         min-height: 234px;
-        padding: 32px 24px;
+        padding: 24px;
     }
 
-    .addons-item>div {
-        width: 48px;
-        height: 48px;
+    .addons-item .addons-item-header {
         margin-bottom: 16px;
     }
 
-    .addons-item>div img {
-        width: 24px;
-        height: 24px;
+    .addons-item .addons-item-header .addons-item-icon {
+        width: 48px;
+        height: 48px;
     }
 
-    .addons-item p {
+    .addons-item .addons-item-body p {
         margin-top: 4px;
     }
 
@@ -489,10 +509,15 @@
     }
 
     /* Footer */
+    .footer-item>ul li:not(:last-child) {
+        margin-bottom: 14px;
+    }
+
     .footer-item>ul li a {
         font-size: var(--fs-b4);
         line-height: var(--lh-b4)
     }
+
     .copyright {
         margin-top: 48px;
     }
@@ -510,8 +535,26 @@
         font-size: var(--fs-b4);
         line-height: var(--lh-b4);
     }
-}
 
+    /* Features page */
+    .features-welcome-text {
+        align-items: stretch;
+        text-align: left;
+        margin-bottom: 32px;
+    }
+
+    .features-welcome-text .btns-wrapper {
+        margin-top: 32px;
+    }
+
+    .features-welcome-text>p {
+        margin-top: 16px;
+    }
+
+    .interests-wrapper {
+        padding-top: 48px;
+    }
+}
 
 @media (max-width: 400px) {
     .mobile-menu-content {
@@ -519,11 +562,11 @@
     }
 
     /* Welcome */
-    .welcome-text {
+    .home-welcome-text {
         text-align: left;
     }
 
-    .welcome-text>p {
+    .home-welcome-text>p {
         margin-top: 16px;
     }
 }
