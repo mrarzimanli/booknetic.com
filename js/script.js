@@ -272,13 +272,42 @@
     const currenRoadmapItemIndex = currenRoadmapItem && currenRoadmapItem.getAttribute('data-index')
     currenRoadmapItemIndex && roadmapSwiper.slideTo(currenRoadmapItemIndex - (swiperBreakpoints[roadmapSwiper.currentBreakpoint].slidesPerView - 2) / 2)
 
+
+    // Features - price countdown
+    if (document.querySelector(".price-countdown")) {
+        const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+        let endDate = "Jan, 2023 15:17:00",
+            countDown = new Date(endDate).getTime(),
+            x = setInterval(function () {
+                let now = new Date().getTime(),
+                    distance = countDown - now;
+
+                if (distance > 0) {
+                    document.getElementById("days").innerText = Math.floor(distance / day)
+                    document.getElementById("hours").innerText = Math.floor((distance % day) / hour)
+                    document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute)
+                    document.getElementById("seconds").innerText = Math.floor((distance % minute) / second)
+                }
+                else {
+                    document.getElementById("days").innerText = "0";
+                    document.getElementById("hours").innerText = "0";
+                    document.getElementById("minutes").innerText = "0";
+                    document.getElementById("seconds").innerText = "0";
+                    clearInterval(x);
+                }
+            }, 0);
+    }
     // Features isotope
     // quick search regex
     let qsRegex;
 
     // init isotope
     const elem = document.querySelector('.isotope-grid');
-    const iso = new Isotope(elem, {
+    const iso = elem && new Isotope(elem, {
         itemSelector: '.isotope-grid-item',
         layoutMode: 'fitRows',
         fitRows: {
