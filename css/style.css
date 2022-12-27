@@ -2560,7 +2560,7 @@ main {
     max-width: 960px;
 }
 
-.feature-inner-welcome-content {
+.feature-inner-welcome-content.content-box-lg {
     padding-top: 0;
 }
 
@@ -2604,6 +2604,7 @@ main {
 .feature-info-wrapper .feature-info .feature-type {
     font-size: var(--fs-b1);
     line-height: var(--lh-b1);
+    flex-shrink: 0;
 }
 
 .feature-info-wrapper .feature-info .price-old {
@@ -2639,10 +2640,10 @@ main {
 .feature-inner-welcome-content .price-countdown {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
     align-self: flex-start;
-    padding: 4px 12px;
+    padding: 3px 12px;
     background: var(--rose-50);
     border-radius: var(--br-16);
     font-weight: var(--fw-medium);
@@ -2659,7 +2660,7 @@ main {
 }
 
 .feature-inner-welcome-content .price-countdown>span {
-    margin-right: 4px;
+    margin: 1px 4px 1px 0;
 }
 
 .feature-inner-welcome-content .price-countdown>div {
@@ -2667,6 +2668,7 @@ main {
     align-items: center;
     color: var(--rose-500);
     min-width: 120px;
+    margin: 1px 0;
 }
 
 .feature-inner-welcome-content .price-countdown>div div:not(:last-child) {

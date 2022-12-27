@@ -178,7 +178,7 @@
         --fs-b1: 18px;
 
         /* Line height - Basic */
-        --lh-b1: 24px;
+        --lh-b1: 28px;
     }
 
     /* Basic */
@@ -310,6 +310,10 @@
 
     #try-demo-modal .form-general {
         margin-top: 16px;
+    }
+
+    .breadcrumbs {
+        padding: 32px 0;
     }
 
     /* Header */
@@ -553,6 +557,22 @@
 
     .interests-wrapper {
         padding-top: 48px;
+    }
+
+    /* Features inner page */
+    .feature-info-wrapper .feature-icon {
+        width: 64px;
+        height: 64px;
+        margin-right: 24px;
+    }
+
+    .feature-info-wrapper .feature-title {
+        font-size: var(--fs-h3);
+        line-height: var(--lh-h3);
+    }
+
+    .feature-inner-welcome-content .btns-wrapper {
+        margin-top: 32px;
     }
 }
 
