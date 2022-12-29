@@ -2098,7 +2098,7 @@ main {
 .testimonial-box {
     position: relative;
     display: flex;
-    background-color: var(--purple-50);
+    background-color: var(--soft-purple-50);
     padding: 64px 32px 40px;
     border-radius: var(--br-16);
 }
@@ -2862,7 +2862,7 @@ main {
 
 
 #pricing-page .partners {
-    background: var(--purple-50);
+    background: var(--soft-purple-50);
 }
 
 .rating {
@@ -2972,7 +2972,7 @@ main {
 
 .live-chat {
     padding: 32px;
-    background: var(--purple-50);
+    background: var(--soft-purple-50);
     border-radius: var(--br-16);
     margin-top: 32px;
 }
@@ -3007,7 +3007,7 @@ main {
         Payments
 ============================== */
 .payments {
-    background: var(--purple-50);
+    background: var(--soft-purple-50);
 }
 
 .payments-content.content-box-lg {
