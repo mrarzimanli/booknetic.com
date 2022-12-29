@@ -301,6 +301,44 @@
                 }
             }, 0);
     }
+
+    // FAQ - accordion
+    let activeAccordionBody = document.querySelector(".faq-item.active .faq-item-body")
+    activeAccordionBody && slideDown(activeAccordionBody)
+
+    let accordionItems = Array.from(document.querySelectorAll('.faq-item'));
+    accordionItems && accordionItems.forEach((accordionItem) => {
+        accordionItem.querySelector(".faq-item-header").addEventListener('click', () => {
+            let activeAccordionItem = document.querySelector(".faq-item.active");
+            let accordionBody = accordionItem.querySelector(".faq-item-body");
+            let activeAccordionBody = activeAccordionItem && activeAccordionItem.querySelector(".faq-item-body");
+
+            if (accordionItem.classList.contains("active")) {
+                accordionItem.classList.remove("active")
+                slideUp(accordionBody)
+            } else {
+                if (activeAccordionItem) {
+                    activeAccordionItem.classList.remove("active")
+                    slideUp(activeAccordionBody)
+                }
+                accordionItem.classList.add("active")
+                slideDown(accordionBody)
+            }
+        })
+    })
+
+    // Pricing feature list
+    const activeFeatureListHeader = document.querySelector('.pricing-feature-list-item-header.active')
+    slideDown(activeFeatureListHeader.nextElementSibling)
+    let featureListHeaders = Array.from(document.querySelectorAll('.pricing-feature-list-item-header'));
+    featureListHeaders && featureListHeaders.forEach((featureListHeader) => {
+        featureListHeader.addEventListener('click', () => {
+            let featureListBody = featureListHeader.nextElementSibling
+            featureListHeader.classList.toggle('active')
+            slideToggle(featureListBody)
+        })
+    })
+
     // Features isotope
     // quick search regex
     let qsRegex;

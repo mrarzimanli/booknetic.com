@@ -1,0 +1,1142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Booknetic">
+    <title>Booknetic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <a href="index.html" class="header-logo">
+                        <img src="images/logo-light.svg" alt="Booknetic" width="150" height="32">
+                    </a>
+                    <nav class="header-menu d-none d-xl-flex">
+                        <ul>
+                            <li>
+                                <div class="header-menu-item">
+                                    <span>Products</span>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="header-menu-dropdown">
+                                    <div class="dropdown-menu">
+                                        <ul class="dropdown-menu-list">
+                                            <li>
+                                                <a href="#">
+                                                    <img src="icons/clock.svg" alt="Appointment booking">
+                                                    <span>Appointment booking</span>
+                                                    <div class="dropdown-menu-item-label"></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="icons/clock.svg" alt="Appointment booking">
+                                                    <span>Appointment booking</span>
+                                                    <div class="label">Soon</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="icons/clock.svg" alt="Appointment booking">
+                                                    <span>Appointment booking</span>
+                                                    <div class="label">Soon</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="dropdown-menu-footer">
+                                            <a class="btn-text primary" href="#">
+                                                <span>See all features</span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.16663 9.99984H15.8333M15.8333 9.99984L9.99996 4.1665M15.8333 9.99984L9.99996 15.8332" stroke="#7A5AF8" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="header-menu-item">
+                                    <span>Features</span>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="header-menu-dropdown">
+                                    <div class="dropdown-menu">
+                                        <ul class="dropdown-menu-list">
+                                            <li>
+                                                <a href="#">
+                                                    <img src="icons/clock.svg" alt="Appointment booking">
+                                                    <span>Appointment booking</span>
+                                                    <div class="dropdown-menu-item-label"></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="icons/clock.svg" alt="Appointment booking">
+                                                    <span>Appointment booking</span>
+                                                    <div class="label">Soon</div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="icons/clock.svg" alt="Appointment booking">
+                                                    <span>Appointment booking</span>
+                                                    <div class="label">Soon</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="dropdown-menu-footer">
+                                            <a class="btn-text primary" href="#">
+                                                <span>See all features</span>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.16663 9.99984H15.8333M15.8333 9.99984L9.99996 4.1665M15.8333 9.99984L9.99996 15.8332" stroke="#7A5AF8" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="header-menu-item" href="pricing.html">
+                                    <span>Pricing</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="btns-wrapper d-none d-md-flex">
+                        <button class="btn-general secondary small btn-show-modal" data-target="#try-demo-modal">Try Demo</button>
+                        <a href="#" class="btn-general primary small" target="_blank">Buy Booknetic</a>
+                    </div>
+                    <button id="btn-mobile-menu-show" class="d-xl-none">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 12H21M3 6H21M3 18H21" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <div class="mobile-menu-content">
+                    <div class="mobile-menu-header">
+                        <a href="index.html" class="header-logo-mobile">
+                            <img src="images/logo-light.svg" alt="Booknetic" width="150" height="32">
+                        </a>
+                        <button id="btn-mobile-menu-close" aria-label="close">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18M6 6L18 18" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mobile-menu-body">
+                        <nav class="header-menu mobile">
+                            <ul>
+                                <li>
+                                    <div class="header-menu-item">
+                                        <span>Products</span>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="header-menu-dropdown">
+                                        <div class="dropdown-menu">
+                                            <ul class="dropdown-menu-list">
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="icons/clock.svg" alt="Appointment booking">
+                                                        <span>Appointment booking</span>
+                                                        <div class="dropdown-menu-item-label"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="icons/clock.svg" alt="Appointment booking">
+                                                        <span>Appointment booking</span>
+                                                        <div class="label">Soon</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="icons/clock.svg" alt="Appointment booking">
+                                                        <span>Appointment booking</span>
+                                                        <div class="label">Soon</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="dropdown-menu-footer">
+                                                <a class="btn-text primary" href="#">
+                                                    <span>See all features</span>
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.16663 9.99984H15.8333M15.8333 9.99984L9.99996 4.1665M15.8333 9.99984L9.99996 15.8332" stroke="#7A5AF8" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="header-menu-item">
+                                        <span>Features</span>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="header-menu-dropdown">
+                                        <div class="dropdown-menu">
+                                            <ul class="dropdown-menu-list">
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="icons/clock.svg" alt="Appointment booking">
+                                                        <span>Appointment booking</span>
+                                                        <div class="dropdown-menu-item-label"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="icons/clock.svg" alt="Appointment booking">
+                                                        <span>Appointment booking</span>
+                                                        <div class="label">Soon</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <img src="icons/clock.svg" alt="Appointment booking">
+                                                        <span>Appointment booking</span>
+                                                        <div class="label">Soon</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="dropdown-menu-footer">
+                                                <a class="btn-text primary" href="#">
+                                                    <span>See all features</span>
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.16663 9.99984H15.8333M15.8333 9.99984L9.99996 4.1665M15.8333 9.99984L9.99996 15.8332" stroke="#7A5AF8" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="header-menu-item" href="pricing.html">
+                                        <span>Pricing</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu-footer d-md-none">
+                        <button class="btn-general small btn-show-modal" data-target="#try-demo-modal">Try Demo</button>
+                        <a href="#" class="btn-general primary small" target="_blank">Buy Booknetic</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="pricing-page">
+        <section class="pricing-welcome">
+            <div class="container">
+                <div class="pricing-welcome-content content-box-md">
+                    <div class="section-header">
+                        <h1>WordPress Appointment</h1>
+                        <p>We connect intuitive design with the latest technology to provide a seamless booking</p>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <div class="featured-icon">
+                                <img src="icons/zap.svg" alt="zap">
+                            </div>
+                            <span class="price">$79/year</span>
+                            <span class="price-desc">Billed annually.</span>
+                        </div>
+                        <div class="pricing-card-body">
+                            <ul class="featured-list">
+                                <li>
+                                    <img src="icons/check-icon.svg" alt="check icon">
+                                    <span>Lifetime update</span>
+                                </li>
+                                <li>
+                                    <img src="icons/check-icon.svg" alt="check icon">
+                                    <span>Unlimited appointments</span>
+                                </li>
+                                <li>
+                                    <img src="icons/check-icon.svg" alt="check icon">
+                                    <span>6 months support</span>
+                                </li>
+                                <li>
+                                    <img src="icons/check-icon.svg" alt="check icon">
+                                    <span>Unlimited locations</span>
+                                </li>
+                                <li>
+                                    <img src="icons/check-icon.svg" alt="check icon">
+                                    <span>All built-in features</span>
+                                </li>
+                                <li>
+                                    <img src="icons/check-icon.svg" alt="check icon">
+                                    <span>Unlimited Staff</span>
+                                </li>
+                                <li>
+                                    <img src="icons/check-icon.svg" alt="check icon">
+                                    <span>1 Domain</span>
+                                </li>
+                                <li>
+                                    <img src="icons/check-icon.svg" alt="check icon">
+                                    <span>Unlimited everything 😇</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card-footer">
+                            <a href="#" class="btn-general primary">Get started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pricing-features">
+            <div class="container">
+                <div class="pricing-features-content content-box-lg">
+                    <ul class="pricing-feature-list">
+                        <li class="pricing-feature-list-item-header active">
+                            <div class="item-key">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span>Built-in features</span>
+                            </div>
+                            <div class="item-value">
+                                <img src="icons/check-icon-success.svg" alt="check">
+                            </div>
+                        </li>
+                        <ul class="pricing-feature-list-item-body">
+                            <li>
+                                <div class="item-key">
+                                    <img src="icons/alarm-clock.svg" alt="alarm clock">
+                                    <span>Reminders</span>
+                                </div>
+                                <div class="item-value">free</div>
+                            </li>
+                            <li>
+                                <div class="item-key">
+                                    <img src="icons/alarm-clock.svg" alt="alarm clock">
+                                    <span>Reminders</span>
+                                </div>
+                                <div class="item-value">free</div>
+                            </li>
+                            <li>
+                                <div class="item-key">
+                                    <img src="icons/alarm-clock.svg" alt="alarm clock">
+                                    <span>Reminders</span>
+                                </div>
+                                <div class="item-value">free</div>
+                            </li>
+                        </ul>
+                        <li class="pricing-feature-list-item-header">
+                            <div class="item-key">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span>Built-in features</span>
+                            </div>
+                            <div class="item-value">
+                                <img src="icons/check-icon-success.svg" alt="check">
+                            </div>
+                        </li>
+                        <ul class="pricing-feature-list-item-body">
+                            <li>
+                                <div class="item-key">
+                                    <img src="icons/alarm-clock.svg" alt="alarm clock">
+                                    <span>Reminders</span>
+                                </div>
+                                <div class="item-value">free</div>
+                            </li>
+                            <li>
+                                <div class="item-key">
+                                    <img src="icons/alarm-clock.svg" alt="alarm clock">
+                                    <span>Reminders</span>
+                                </div>
+                                <div class="item-value">free</div>
+                            </li>
+                            <li>
+                                <div class="item-key">
+                                    <img src="icons/alarm-clock.svg" alt="alarm clock">
+                                    <span>Reminders</span>
+                                </div>
+                                <div class="item-value">free</div>
+                            </li>
+                        </ul>
+                        <li class="pricing-feature-list-item-header">
+                            <div class="item-key">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span>Built-in features</span>
+                            </div>
+                            <div class="item-value">
+                                <img src="icons/check-icon-success.svg" alt="check">
+                            </div>
+                        </li>
+                        <ul class="pricing-feature-list-item-body">
+                            <li>
+                                <div class="item-key">
+                                    <img src="icons/alarm-clock.svg" alt="alarm clock">
+                                    <span>Reminders</span>
+                                </div>
+                                <div class="item-value">free</div>
+                            </li>
+                            <li>
+                                <div class="item-key">
+                                    <img src="icons/alarm-clock.svg" alt="alarm clock">
+                                    <span>Reminders</span>
+                                </div>
+                                <div class="item-value">free</div>
+                            </li>
+                            <li>
+                                <div class="item-key">
+                                    <img src="icons/alarm-clock.svg" alt="alarm clock">
+                                    <span>Reminders</span>
+                                </div>
+                                <div class="item-value">free</div>
+                            </li>
+                        </ul>
+                        <li class="pricing-feature-list-item-header">
+                            <div class="item-key">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span>Built-in features</span>
+                            </div>
+                            <div class="item-value">
+                                <img src="icons/check-icon-success.svg" alt="check">
+                            </div>
+                        </li>
+                        <ul class="pricing-feature-list-item-body">
+                            <li>
+                                <div class="item-key">
+                                    <img src="icons/alarm-clock.svg" alt="alarm clock">
+                                    <span>Reminders</span>
+                                </div>
+                                <div class="item-value">free</div>
+                            </li>
+                            <li>
+                                <div class="item-key">
+                                    <img src="icons/alarm-clock.svg" alt="alarm clock">
+                                    <span>Reminders</span>
+                                </div>
+                                <div class="item-value">free</div>
+                            </li>
+                            <li>
+                                <div class="item-key">
+                                    <img src="icons/alarm-clock.svg" alt="alarm clock">
+                                    <span>Reminders</span>
+                                </div>
+                                <div class="item-value">free</div>
+                            </li>
+                        </ul>
+                    </ul>
+                    <div class="btns-wrapper">
+                        <a href="mailto:example@gmail.com" class="btn-general">See all features</a>
+                        <a href="#" class="btn-general primary" target="_blank">Get started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <div class="partners-content">
+                    <div>
+                        <img src="images/partners/envato.svg" alt="envato">
+                    </div>
+                    <div>
+                        <img src="images/partners/colorlib.svg" alt="colorlib">
+                    </div>
+                    <div>
+                        <img src="images/partners/athemes.svg" alt="athemes">
+                    </div>
+                    <div>
+                        <img src="images/partners/wpmayor.svg" alt="mpmayor">
+                    </div>
+                    <div>
+                        <img src="images/partners/wpexplorer.svg" alt="wpexplorer">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials">
+            <div class="container">
+                <div class="testimonials-content content-box-lg">
+                    <div class="section-header">
+                        <h2>Excellent rating</h2>
+                        <p>Whenever you need help our support team is as far as one click </p>
+                    </div>
+                    <div class="rating">
+                        <div class="rating-point">
+                            <span>4.9</span>
+                            <span>/ 5</span>
+                        </div>
+                        <div class="rating-stars">
+                            <img src="icons/star-filled-01.svg" alt="star filled">
+                            <img src="icons/star-filled-01.svg" alt="star filled">
+                            <img src="icons/star-filled-01.svg" alt="star filled">
+                            <img src="icons/star-filled-01.svg" alt="star filled">
+                            <img src="icons/star-half.svg" alt="star half">
+                        </div>
+                    </div>
+                    <div class="testimonials-wrapper">
+                        <div class="swiper testimonialsSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-box-img">
+                                            <img data-src="images/testimonials/user-1.svg" class="swiper-lazy" alt="testimonial">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="testimonial-box-text">
+                                            <span>Skylar Botosh</span>
+                                            <p>I'm very very very happy with booknetic plugin in regard to the code quality, the logic in programming and customer service. This plugin is simply the best while in other there is always something missing. This is to set up and bug-free. 2 weeks on and still have no issues. The only problem i have is codecanyon doesn't allow 10 stars rating for them otherwise I would select them all of them.</p>
+                                            <div class="testimonial-rate">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star.svg" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-box-img">
+                                            <img data-src="images/testimonials/user-2.svg" class="swiper-lazy" alt="testimonial">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="testimonial-box-text">
+                                            <span>Skylar Botosh</span>
+                                            <p>I'm very very very happy with booknetic plugin in regard to the code quality, the logic in programming and customer service. This plugin is simply the best while in other there is always something missing. This is to set up and bug-free.</p>
+                                            <div class="testimonial-rate">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-box-img">
+                                            <img data-src="images/testimonials/user-3.svg" class="swiper-lazy" alt="testimonial">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="testimonial-box-text">
+                                            <span>Skylar Botosh</span>
+                                            <p>I'm very very very happy with booknetic plugin in regard to the code quality, the logic in programming and customer service. This plugin is simply the best while in other there is always something missing. This is to set up and bug-free.</p>
+                                            <div class="testimonial-rate">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-box-img">
+                                            <img data-src="images/testimonials/user-1.svg" class="swiper-lazy" alt="testimonial">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="testimonial-box-text">
+                                            <span>Skylar Botosh</span>
+                                            <p>I'm very very very happy with booknetic plugin in regard to the code quality, the logic in programming and customer service. This plugin is simply the best while in other there is always something missing. This is to set up and bug-free. 2 weeks on and still have no issues. The only problem i have is codecanyon doesn't allow 10 stars rating for them otherwise I would select them all of them.</p>
+                                            <div class="testimonial-rate">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star.svg" alt="star">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-box-img">
+                                            <img data-src="images/testimonials/user-2.svg" class="swiper-lazy" alt="testimonial">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="testimonial-box-text">
+                                            <span>Skylar Botosh</span>
+                                            <p>I'm very very very happy with booknetic plugin in regard to the code quality, the logic in programming and customer service. This plugin is simply the best while in other there is always something missing. This is to set up and bug-free.</p>
+                                            <div class="testimonial-rate">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="testimonial-box-img">
+                                            <img data-src="images/testimonials/user-3.svg" class="swiper-lazy" alt="testimonial">
+                                            <div class="swiper-lazy-preloader"></div>
+                                        </div>
+                                        <div class="testimonial-box-text">
+                                            <span>Skylar Botosh</span>
+                                            <p>I'm very very very happy with booknetic plugin in regard to the code quality, the logic in programming and customer service. This plugin is simply the best while in other there is always something missing. This is to set up and bug-free.</p>
+                                            <div class="testimonial-rate">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                                <img src="icons/star-filled.svg" alt="star filled">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="swiper-btn-next">
+                            <img data-src="icons/angle-right.svg" class="lazyload" alt="angle right">
+                        </div>
+                        <div class="swiper-btn-prev">
+                            <img data-src="icons/angle-left.svg" class="lazyload" alt="angle left">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="payments">
+            <div class="container">
+                <div class="payments-content content-box-lg">
+                    <div class="section-header">
+                        <h3>Secure payment by envato</h3>
+                        <p>Whenever you need help our support team is as far as one click </p>
+                    </div>
+                    <div class="payments-wrapper">
+                        <div>
+                            <img src="icons/paypal.svg" alt="paypal">
+                            <span>PayPal</span>
+                        </div>
+                        <div>
+                            <img src="icons/master.svg" alt="master">
+                            <span>Master</span>
+                        </div>
+                        <div>
+                            <img src="icons/visa.svg" alt="visa">
+                            <span>Visa</span>
+                        </div>
+                        <div>
+                            <img src="icons/skrill.svg" alt="skrill">
+                            <span>Skrill</span>
+                        </div>
+                        <div>
+                            <img src="icons/amex.svg" alt="amex">
+                            <span>Americanexpress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <div class="container">
+                <div class="faq-content content-box-lg">
+                    <div class="section-header">
+                        <h3>Frequently asked questions</h3>
+                        <p>Everything you need to know about the product and billing.</p>
+                    </div>
+                    <div class="faq-items-wrapper">
+                        <div class="faq-item active">
+                            <div class="faq-item-header">
+                                <span>What is a Planly?</span>
+                                <button class="btn-collapse">
+                                    <img class="minus" src="icons/minus-circle.svg" alt="minus">
+                                    <img class="plus" src="icons/plus-circle.svg" alt="plus">
+                                </button>
+                            </div>
+                            <div class="faq-item-body">
+                                <p>Planly is a social media scheduling tool for TikTok and Instagram.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-item-header">
+                                <span>What is the difference between Planly and other scheduling tools?</span>
+                                <button class="btn-collapse">
+                                    <img class="minus" src="icons/minus-circle.svg" alt="minus">
+                                    <img class="plus" src="icons/plus-circle.svg" alt="plus">
+                                </button>
+                            </div>
+                            <div class="faq-item-body">
+                                <p>We get this question very often. Planly lets you auto publish your posts to TikTok and Instagram. Compared to other scheduling tools, we require <strong>no push notifications</strong> or manual interaction afterward. <br> Also, you can schedule Instagram carousel posts, stories, first comments, and pin posts from personal accounts with Planly.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-item-header">
+                                <span>Can I schedule posts to a personal account?</span>
+                                <button class="btn-collapse">
+                                    <img class="minus" src="icons/minus-circle.svg" alt="minus">
+                                    <img class="plus" src="icons/plus-circle.svg" alt="plus">
+                                </button>
+                            </div>
+                            <div class="faq-item-body">
+                                <p>Absolutely. Planly lets you schedule your posts to personal, creator, and business accounts.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-item-header">
+                                <span>Can I use Planly for free?</span>
+                                <button class="btn-collapse">
+                                    <img class="minus" src="icons/minus-circle.svg" alt="minus">
+                                    <img class="plus" src="icons/plus-circle.svg" alt="plus">
+                                </button>
+                            </div>
+                            <div class="faq-item-body">
+                                <p>Of course, you can. You can create a free account at Planly and also use 14-day free trials of our <a href="#">premium plans.</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="live-chat">
+                        <div class="live-chat-content">
+                            <img src="images/avatar_group.svg" alt="avatar group">
+                            <h5>Still have questions?</h5>
+                            <p>Can’t find the answer you’re looking for? Please chat to our friendly team.</p>
+                            <div class="btns-wrapper">
+                                <a href="mailto:example@gmail.com" class="btn-general">See all features</a>
+                                <a href="#" class="btn-general primary" target="_blank">Get started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content content-box-md">
+                <div class="row  gx-lg-5 gy-0">
+                    <div class="col-6 col-lg">
+                        <div class="footer-item">
+                            <span>Product</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Appointment booking</a>
+                                </li>
+                                <li>
+                                    <a href="#">Event booking (soon)</a>
+                                </li>
+                                <li>
+                                    <a href="#">Hotel booking (soon)</a>
+                                </li>
+                                <li>
+                                    <a href="#">Rental booking (soon)</a>
+                                </li>
+                                <li>
+                                    <a href="#">Booknetic SaaS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <span>Useful link</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Calendly wordpress alternatives</a>
+                                </li>
+                                <li>
+                                    <a href="#">Hubspot wordpress alternatives</a>
+                                </li>
+                                <li>
+                                    <a href="#">Simplybookme wordpress alternatives</a>
+                                </li>
+                                <li>
+                                    <a href="#">Setmore wordpress alternatives</a>
+                                </li>
+                                <li>
+                                    <a href="#">Calendly vs Booknetic</a>
+                                </li>
+                                <li>
+                                    <a href="#">Simplybookme vs Booknetic</a>
+                                </li>
+                                <li>
+                                    <a href="#">Setmore vs Booknetic</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-item d-lg-none">
+                            <span>Popular features</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Custom forms</a>
+                                </li>
+                                <li>
+                                    <a href="#">Workflow</a>
+                                </li>
+                                <li>
+                                    <a href="#">Recurring appointments</a>
+                                </li>
+                                <li>
+                                    <a href="#">Group appointment</a>
+                                </li>
+                                <li>
+                                    <a href="#">Invoices</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tax</a>
+                                </li>
+                                <li>
+                                    <a href="#">Coupons</a>
+                                </li>
+                                <li>
+                                    <a href="#">Partners</a>
+                                </li>
+                                <li>
+                                    <a href="#">Customer panel</a>
+                                </li>
+                                <li>
+                                    <a href="#">Custom appointment statuses</a>
+                                </li>
+                                <li>
+                                    <a href="#">Waiting list</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Multi booking feature</a>
+                                </li>
+                                <li>
+                                    <a href="#">User role manager</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-item d-lg-none">
+                            <span>Legal</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Privacy policy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg">
+                        <div class="footer-item custom-size">
+                            <span>Navigation</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Features</a>
+                                </li>
+                                <li>
+                                    <a href="#">Integrations</a>
+                                </li>
+                                <li>
+                                    <a href="#">Addons</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pricing</a>
+                                </li>
+                                <li>
+                                    <a href="#">Try demo</a>
+                                </li>
+                                <li>
+                                    <a href="#">Affiliate program</a>
+                                </li>
+                                <li>
+                                    <a href="#">Partners</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-item custom-size">
+                            <span>Resources</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Documentation</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact support</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#">Suggest a feature</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sitemap <span>New</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">Partners</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-item d-lg-none">
+                            <span>Popular integrations</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Zoom</a>
+                                </li>
+                                <li>
+                                    <a href="#">Google calendar</a>
+                                </li>
+                                <li>
+                                    <a href="#">Paypal</a>
+                                </li>
+                                <li>
+                                    <a href="#">Stripe</a>
+                                </li>
+                                <li>
+                                    <a href="#">Whatsapp</a>
+                                </li>
+                                <li>
+                                    <a href="#">WooCommerce</a>
+                                </li>
+                                <li>
+                                    <a href="#">Zapier, IFTTT, Integromat</a>
+                                </li>
+                                <li>
+                                    <a href="#">Telegram</a>
+                                </li>
+                                <li>
+                                    <a href="#">Google analytics and tag manager</a>
+                                </li>
+                                <li>
+                                    <a href="#">Custom appointment statuses</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-item d-lg-none">
+                            <span>Our brands</span>
+                            <ul>
+                                <li>
+                                    <a href="#">FS Code</a>
+                                </li>
+                                <li>
+                                    <a href="#">FS Poster</a>
+                                </li>
+                                <li>
+                                    <a href="#">Planly</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pagear</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 d-none d-lg-block">
+                        <div class="footer-item">
+                            <span>Popular features</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Custom forms</a>
+                                </li>
+                                <li>
+                                    <a href="#">Workflow</a>
+                                </li>
+                                <li>
+                                    <a href="#">Recurring appointments</a>
+                                </li>
+                                <li>
+                                    <a href="#">Group appointment</a>
+                                </li>
+                                <li>
+                                    <a href="#">Invoices</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tax</a>
+                                </li>
+                                <li>
+                                    <a href="#">Coupons</a>
+                                </li>
+                                <li>
+                                    <a href="#">Partners</a>
+                                </li>
+                                <li>
+                                    <a href="#">Customer panel</a>
+                                </li>
+                                <li>
+                                    <a href="#">Custom appointment statuses</a>
+                                </li>
+                                <li>
+                                    <a href="#">Waiting list</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Multi booking feature</a>
+                                </li>
+                                <li>
+                                    <a href="#">User role manager</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <span>Legal</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Privacy policy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 d-none d-lg-block">
+                        <div class="footer-item">
+                            <span>Popular integrations</span>
+                            <ul>
+                                <li>
+                                    <a href="#">Zoom</a>
+                                </li>
+                                <li>
+                                    <a href="#">Google calendar</a>
+                                </li>
+                                <li>
+                                    <a href="#">Paypal</a>
+                                </li>
+                                <li>
+                                    <a href="#">Stripe</a>
+                                </li>
+                                <li>
+                                    <a href="#">Whatsapp</a>
+                                </li>
+                                <li>
+                                    <a href="#">WooCommerce</a>
+                                </li>
+                                <li>
+                                    <a href="#">Zapier, IFTTT, Integromat</a>
+                                </li>
+                                <li>
+                                    <a href="#">Telegram</a>
+                                </li>
+                                <li>
+                                    <a href="#">Google analytics and tag manager</a>
+                                </li>
+                                <li>
+                                    <a href="#">Custom appointment statuses</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-item">
+                            <span>Our brands</span>
+                            <ul>
+                                <li>
+                                    <a href="#">FS Code</a>
+                                </li>
+                                <li>
+                                    <a href="#">FS Poster</a>
+                                </li>
+                                <li>
+                                    <a href="#">Planly</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pagear</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="copyright-primary">
+                        <a class="footer-logo" href="index.html">
+                            <img src="images/logo-dark.svg" alt="Booknetic">
+                        </a>
+                        <div class="site-langs">
+                            <div class="selected-lang">
+                                <img src="images/flags/az.svg" alt="Azerbaijani flag">
+                                <span>Azerbaijani</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="lang-dropdown">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flags/us.svg" alt="English flag">
+                                            <span>English</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flags/fr.svg" alt="French flag">
+                                            <span>French</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flags/ru.svg" alt="Russian flag">
+                                            <span>Russian</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flags/es.svg" alt="Spanish flag">
+                                            <span>Spanish</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flags/pt.svg" alt="Portuguese flag">
+                                            <span>Portuguese</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright-secondary">
+                        <p>© 2022 Booknetic. All rights reserved.</p>
+                        <ul class="social-list">
+                            <li>
+                                <a href="#" aria-label="github" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9995 0.999023C5.92551 0.999023 0.999512 5.81902 0.999512 11.766C0.999512 16.521 4.15151 20.557 8.52251 21.98C9.07351 22.079 9.27351 21.747 9.27351 21.461C9.27351 21.206 9.26451 20.528 9.25951 19.631C6.19951 20.281 5.55451 18.187 5.55451 18.187C5.05351 16.943 4.33251 16.612 4.33251 16.612C3.33351 15.944 4.40851 15.958 4.40851 15.958C5.51251 16.034 6.09251 17.067 6.09251 17.067C7.07351 18.713 8.66651 18.237 9.29451 17.962C9.39451 17.267 9.67751 16.792 9.99251 16.522C7.54951 16.251 4.98151 15.327 4.98151 11.202C4.98151 10.027 5.41051 9.06602 6.11451 8.31302C6.00051 8.04102 5.62351 6.94602 6.22151 5.46402C6.22151 5.46402 7.14551 5.17502 9.24751 6.56702C10.1245 6.32802 11.0655 6.21002 12.0005 6.20502C12.9345 6.21002 13.8755 6.32802 14.7545 6.56702C16.8545 5.17502 17.7765 5.46402 17.7765 5.46402C18.3765 6.94602 17.9995 8.04102 17.8855 8.31302C18.5905 9.06602 19.0165 10.027 19.0165 11.202C19.0165 15.338 16.4445 16.248 13.9945 16.515C14.3895 16.847 14.7405 17.504 14.7405 18.508C14.7405 19.947 14.7275 21.108 14.7275 21.461C14.7275 21.749 14.9255 22.084 15.4835 21.979C19.8505 20.553 22.9995 16.52 22.9995 11.766C22.9995 5.81902 18.0745 0.999023 11.9995 0.999023Z" fill="#EAECF0" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="facebook" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 3.49902C17 3.22302 16.775 2.99902 16.5 2.99902H14C11.238 2.99902 9 5.01402 9 7.49902V10.199H6.5C6.224 10.199 6 10.423 6 10.699V13.299C6 13.575 6.224 13.799 6.5 13.799H9V20.499C9 20.775 9.224 20.999 9.5 20.999H12.5C12.775 20.999 13 20.775 13 20.499V13.799H15.619C15.844 13.799 16.041 13.649 16.102 13.433L16.823 10.833C16.912 10.515 16.672 10.199 16.342 10.199H13V7.49902C13 7.00202 13.447 6.59902 14 6.59902H16.5C16.775 6.59902 17 6.37502 17 6.09902V3.49902Z" fill="#EAECF0" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="twitter" target="_blank">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.07693 19.9993C15.3229 19.9993 19.5149 14.3733 19.5149 9.0343C19.5149 8.8873 20.5449 8.0033 20.9859 6.1603C21.0759 5.7863 20.7119 5.4913 20.3689 5.6483C19.4889 6.0523 18.5959 5.7323 18.2079 5.2723C16.7159 3.6453 14.2209 3.5673 12.6339 5.0973C11.6109 6.0843 11.1769 7.5543 11.4939 8.9573C8.14293 9.1963 5.84193 7.6083 3.94993 5.4313C3.70593 5.1483 3.25293 5.2973 3.20193 5.6713C2.92193 7.7533 2.83393 12.8153 7.84993 15.7223C6.97893 16.9743 5.27393 17.7133 3.37593 18.0303C2.95593 18.1013 2.85593 18.6833 3.23993 18.8713C4.74393 19.6113 6.39693 19.9983 8.07693 19.9963" fill="#EAECF0" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@booknetic.com" aria-label="email">info@booknetic.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

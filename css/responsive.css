@@ -219,7 +219,7 @@
 
     /* Partners */
     .partners-content {
-        padding: 64px 0;
+        padding: 48px 0;
     }
 
     /* Add-ons */
@@ -236,6 +236,19 @@
 
     .social-list {
         margin-bottom: 24px;
+    }
+
+    /* Pricing */
+    .pricing-card .featured-list li {
+        width: 100%;
+    }
+
+    .pricing-feature-list li>div {
+        width: auto;
+    }
+
+    .pricing-feature-list li {
+        justify-content: space-between;
     }
 }
 
@@ -282,6 +295,7 @@
     .btns-wrapper {
         flex-direction: column;
         align-items: stretch;
+        align-self: stretch;
         margin-top: 32px;
     }
 
@@ -573,6 +587,92 @@
 
     .feature-inner-welcome-content .btns-wrapper {
         margin-top: 32px;
+    }
+
+    /* Pricing */
+    .pricing-card {
+        max-width: 400px;
+    }
+
+    .pricing-card-header {
+        padding: 24px 24px 0;
+    }
+
+    .pricing-card-body {
+        padding: 32px 24px 24px;
+    }
+
+    .featured-icon {
+        width: 34px;
+        height: 34px;
+        border-width: 6px;
+        margin-bottom: 6px;
+    }
+
+    .pricing-card-header .price {
+        font-size: 38px;
+        line-height: 44px;
+    }
+
+    .pricing-card .featured-list li {
+        padding: 0;
+    }
+
+    .pricing-card-footer {
+        padding: 24px 24px 32px;
+    }
+
+    .pricing-card-footer .btn-general {
+        max-width: none;
+    }
+
+    .pricing-features-content .btns-wrapper {
+        margin-top: 32px;
+        flex-direction: column-reverse;
+    }
+
+    .pricing-features-content .btns-wrapper>*:not(:last-child) {
+        margin-bottom: 0;
+        margin-top: 12px;
+    }
+
+    .payments-wrapper>div {
+        max-width: 226px;
+        height: 32px;
+        margin: 0 12px 16px;
+    }
+
+    .payments-content.content-box-lg {
+        padding-bottom: 48px;
+    }
+
+    .live-chat {
+        padding: 32px 24px;
+        margin-top: 16px;
+    }
+
+    .live-chat-content>h5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .live-chat-content>p {
+        font-size: var(--fs-b3);
+        line-height: var(--lh-b3);
+        margin-top: 8px;
+    }
+
+    .live-chat-content .btns-wrapper {
+        margin-top: 32px;
+    }
+
+    .live-chat-content .btns-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .live-chat-content .btns-wrapper>*:not(:last-child) {
+        margin-bottom: 0;
+        margin-top: 12px;
     }
 }
 
