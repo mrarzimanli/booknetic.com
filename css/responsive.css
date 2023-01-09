@@ -293,15 +293,15 @@
     }
 
     .btns-wrapper {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: stretch;
         align-self: stretch;
-        margin-top: 32px;
+        margin-top: 32px !important;
     }
 
     .btns-wrapper>*:not(:last-child) {
         margin-right: 0 !important;
-        margin-bottom: 12px;
+        margin-top: 12px;
     }
 
     .modal-dialog {
@@ -356,10 +356,6 @@
         align-items: stretch;
         text-align: left;
         margin-bottom: 32px;
-    }
-
-    .home-welcome-text .btns-wrapper {
-        margin-top: 32px;
     }
 
     /* Partners */
@@ -520,12 +516,6 @@
         margin-bottom: 32px;
     }
 
-    .call-to-action-content .btns-wrapper {
-        flex-direction: column;
-        align-items: stretch;
-        align-self: stretch;
-    }
-
     /* Footer */
     .footer-item>ul li:not(:last-child) {
         margin-bottom: 14px;
@@ -561,10 +551,6 @@
         margin-bottom: 32px;
     }
 
-    .features-welcome-text .btns-wrapper {
-        margin-top: 32px;
-    }
-
     .features-welcome-text>p {
         margin-top: 16px;
     }
@@ -583,10 +569,6 @@
     .feature-info-wrapper .feature-title {
         font-size: var(--fs-h3);
         line-height: var(--lh-h3);
-    }
-
-    .feature-inner-welcome-content .btns-wrapper {
-        margin-top: 32px;
     }
 
     /* Pricing */
@@ -626,16 +608,6 @@
         max-width: none;
     }
 
-    .pricing-features-content .btns-wrapper {
-        margin-top: 32px;
-        flex-direction: column-reverse;
-    }
-
-    .pricing-features-content .btns-wrapper>*:not(:last-child) {
-        margin-bottom: 0;
-        margin-top: 12px;
-    }
-
     .payments-wrapper>div {
         max-width: 226px;
         height: 32px;
@@ -662,17 +634,8 @@
         margin-top: 8px;
     }
 
-    .live-chat-content .btns-wrapper {
-        margin-top: 32px;
-    }
-
-    .live-chat-content .btns-wrapper {
-        flex-direction: column-reverse;
-    }
-
-    .live-chat-content .btns-wrapper>*:not(:last-child) {
-        margin-bottom: 0;
-        margin-top: 12px;
+    .live-chat-content>.btns-wrapper {
+        margin-top: 24px !important;
     }
 }
 

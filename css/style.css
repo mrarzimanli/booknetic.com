@@ -1103,13 +1103,13 @@ html {
 
 .mobile-menu-footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 18px 24px;
     border-top: 1px solid var(--gray-100);
 }
 
 .mobile-menu-footer>*:not(:last-child) {
-    margin-bottom: 12px;
+    margin-top: 12px;
 }
 
 .header-menu.mobile>ul {
