@@ -404,6 +404,11 @@ html {
     margin-top: 40px;
 }
 
+.content-box-sm {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
 .content-box-md {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -656,7 +661,12 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     flex-shrink: 0;
+    font-weight: var(--fw-semi-bold);
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--purple-600);
     background-color: var(--soft-purple-150);
     border: 8px solid var(--soft-purple-50);
     box-sizing: content-box;
@@ -965,6 +975,7 @@ html {
 
 .dropdown-menu-list li a {
     display: flex;
+    align-items: flex-start;
     padding: 12px;
     border-radius: var(--br-8);
     transition: background-color 250ms ease-in-out;
@@ -1365,6 +1376,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding-left: 10px;
 }
 
@@ -1670,6 +1682,7 @@ main {
 .advantage-text {
     display: flex;
     flex-direction: column;
+    max-width: 560px;
 }
 
 .advantage-text>p {
@@ -2001,6 +2014,7 @@ main {
 
 .reference-box {
     display: block;
+    width: 100%;
     background-color: var(--white);
     border-radius: var(--br-16);
     overflow: hidden;
@@ -2771,14 +2785,15 @@ main {
 }
 
 .pricing-card-footer {
+    flex-direction: column;
     display: flex;
-    justify-content: center;
+    align-items: center;
     background: var(--gray-50);
     padding: 32px;
 }
 
 .pricing-card-footer .btn-general {
-    flex-grow: 1;
+    width: 100%;
     max-width: 320px;
 }
 
@@ -3010,15 +3025,12 @@ main {
     background: var(--soft-purple-50);
 }
 
-.payments-content.content-box-lg {
-    padding-bottom: 72px;
-}
-
 .payments-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding-bottom: 78px;
 }
 
 .payments-wrapper>div {
@@ -3027,15 +3039,468 @@ main {
     justify-content: center;
     max-width: 280px;
     height: 44px;
-    margin: 0 44px 22px;
+    margin: 0 36px 18px;
     font-weight: var(--fw-semi-bold);
     font-size: var(--fs-h4);
     line-height: var(--lh-h4);
 }
 
 .payments-wrapper>div img {
-    width: 64px;
+    width: auto;
     height: 100%;
     object-fit: contain;
     margin-right: 12px;
+}
+
+/* ==============================
+        Saas welcome
+============================== */
+
+.saas-welcome {
+    background-color: var(--soft-purple-50);
+    background-image: url('../images/patterns/saas.svg');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+}
+
+.saas-welcome-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.saas-welcome-text {
+    display: flex;
+    flex-direction: column;
+    margin-right: 32px;
+    max-width: 506px;
+}
+
+.saas-welcome-text>p {
+    font-size: var(--fs-b1);
+    line-height: var(--lh-b1);
+    max-width: 462px;
+    margin-top: 24px;
+}
+
+.saas-welcome-text .btns-wrapper {
+    margin-top: 48px;
+}
+
+.saas-welcome-text .btns-wrapper>*:not(:last-child) {
+    margin-right: 24px;
+}
+
+.saas-welcome-image {
+    max-width: 678px;
+}
+
+.saas-welcome-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* ==============================
+        What is saas
+============================== */
+
+.whats-saas .section-header {
+    margin-bottom: 96px;
+}
+
+.whats-saas-text, .whats-saas-image {
+    display: flex;
+    flex-direction: column;
+    max-width: 560px;
+}
+
+.whats-saas-text>p {
+    font-size: var(--fs-b2);
+    line-height: var(--lh-b2);
+    color: var(--gray-500);
+    margin-top: 16px;
+}
+
+.whats-saas-image {
+    margin-left: auto;
+}
+
+.whats-saas-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* ==============================
+        How it works - saas
+============================== */
+.how-it-works-content {
+    padding-bottom: 64px;
+}
+
+.how-it-works-wrapper {
+    padding: 32px 0;
+}
+
+.how-it-works .featured-icon {
+    background-color: var(--soft-purple-200);
+    border-color: var(--soft-purple-150);
+}
+
+.how-it-works-box p {
+    margin-top: 16px;
+    font-size: var(--fs-b2);
+    line-height: var(--lh-b2);
+    color: var(--gray-500);
+}
+
+/* IMage comparison slider */
+#image-comparison-slider {
+    position: relative;
+    width: 592px;
+    cursor: col-resize;
+    border-radius: var(--br-16);
+    box-shadow: var(--box-shadow-lg);
+    /* overflow: hidden; */
+}
+
+#image-comparison-slider img {
+    display: block;
+    width: 592px;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+    border-radius: var(--br-16);
+}
+
+#image-comparison-slider .img-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 300ms ease-out;
+}
+
+#image-comparison-slider .img-wrapper img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#image-comparison-slider .handle {
+    position: absolute;
+    top: -32px;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: calc(100% + 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    z-index: 2;
+    transition: all 300ms ease-out;
+}
+
+#image-comparison-slider .handle-line {
+    width: 2px;
+    flex-grow: 1;
+    background-color: var(--purple-600);
+}
+
+#image-comparison-slider .handle-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--purple-600);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+#image-comparison-slider .handle-circle svg {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+#image-comparison-slider .handle-circle svg path {
+    fill: var(--purple-600);
+}
+
+/* ==============================
+       Saas business
+============================== */
+.saas-business .section-header {
+    margin-bottom: 96px;
+}
+
+.saas-business-wrapper .row:not(:last-child) {
+    margin-bottom: 96px;
+}
+
+.saas-business-text, .saas-business-image {
+    display: flex;
+    flex-direction: column;
+    max-width: 560px;
+}
+
+.saas-business-image {
+    margin-left: auto;
+}
+
+.saas-business-text>p {
+    font-size: var(--fs-b2);
+    line-height: var(--lh-b2);
+    color: var(--gray-500);
+    margin-top: 16px;
+}
+
+.saas-business-image img {
+    width: 100%;
+    height: auto;
+}
+
+.saas-business-wrapper .row.part-1 {
+    position: relative;
+    margin-bottom: 0 !important;
+}
+
+.saas-business-wrapper .row.part-1:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: calc(100% - 24px);
+    height: 2px;
+    border-top: 2px dashed var(--gray-300);
+    transform: translate(-50%, -50%);
+}
+
+.saas-business-wrapper .row.part-1 .saas-business-text,
+.saas-business-wrapper .row.part-1 .saas-business-image {
+    justify-content: flex-end;
+}
+
+.saas-business-wrapper .row.part-1 .saas-business-text {
+    padding-bottom: 32px;
+}
+
+.saas-business-wrapper .row.part-2 .saas-business-text,
+.saas-business-wrapper .row.part-2 .saas-business-image {
+    justify-content: flex-start;
+}
+
+.saas-business-wrapper .row.part-2 .saas-business-text {
+    padding-top: 32px;
+}
+
+/* ==============================
+       Saas setup
+============================== */
+.saas-setup {
+    background-color: var(--soft-purple-50);
+}
+
+.saas-setup .section-header {
+    margin-bottom: 96px;
+}
+
+.saas-setup-wrapper .row:not(:last-child):not(.custom) {
+    margin-bottom: 96px;
+}
+
+.saas-setup-wrapper .row.custom {
+    margin-bottom: 24px;
+}
+
+.saas-setup-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.saas-setup-text>p {
+    font-size: var(--fs-b2);
+    line-height: var(--lh-b2);
+    color: var(--gray-500);
+    margin-top: 16px;
+}
+
+.saas-setup-image img {
+    width: 100%;
+    height: auto;
+}
+
+.saas-setup-image, .saas-setup-text {
+    max-width: 560px;
+}
+
+.saas-setup-text {
+    margin-left: auto;
+}
+
+.saas-setup .featured-icon {
+    background-color: var(--soft-purple-200);
+    border-color: var(--soft-purple-150);
+}
+
+/* ==============================
+       Saas pricing
+============================== */
+.saas-pricing {
+    background-color: var(--soft-purple-50);
+}
+
+.market-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.market-rating>img {
+    width: 124px;
+    height: auto;
+}
+
+.market-rating>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.market-rating-point {
+    margin-right: 16px;
+}
+
+.market-rating-point span:first-child {
+    font-weight: var(--fw-medium);
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.market-rating-point span:last-child {
+    font-size: var(--fs-b1);
+    line-height: var(--lh-b1);
+}
+
+.market-rating-stars {
+    display: flex;
+    align-items: center;
+}
+
+.market-rating-stars>img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.market-rating-stars>img:not(:last-child) {
+    margin-right: 8px;
+}
+
+/* ==============================
+         Case studies
+============================== */
+.case-study-content {
+    padding-bottom: 76px;
+}
+
+.case-study-wrapper {
+    position: relative;
+}
+
+.case-study-content {
+    padding-bottom: 76px;
+}
+
+.case-study-content .section-header {
+    margin-bottom: 24px;
+}
+
+.caseStudySwiper {
+    padding: 40px 0;
+}
+
+.caseStudySwiper .swiper-slide {
+    display: flex;
+    background: none;
+    height: auto;
+}
+
+.caseStudySwiper .swiper-lazy-preloader {
+    background-size: 120px;
+}
+
+.case-study-box {
+    display: block;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: var(--br-16);
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0px 0px 16px 1px rgba(196, 196, 196, 0.15);
+}
+
+.case-study-box-img {
+    position: relative;
+    height: 330px;
+    border-bottom: 1px solid var(--gray-200);
+    overflow: hidden;
+}
+
+.case-study-box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.case-study-box-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 20px;
+    color: var(--gray-700);
+}
+
+.case-study-box-text p {
+    margin-top: 16px;
+    color: var(--gray-500)
+}
+
+.case-study-box-text .btn-text {
+    margin-top: 16px;
+}
+
+.case-study-box-text>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.case-study-box-text>div>span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 4px 12px;
+    text-align: center;
+    background-color: #FFFAEB;
+    color: #B54708;
+    border-radius: var(--br-16);
+    margin-left: 8px;
+    font-size: var(--fs-b4);
+    line-height: var(--lh-b4);
+    font-weight: var(--fw-medium);
 }

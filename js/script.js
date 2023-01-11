@@ -245,6 +245,46 @@
         }
     });
 
+    // Swiper JS - References
+    const caseStudySwiper = new Swiper(".caseStudySwiper", {
+        spaceBetween: 32,
+        lazy: true,
+        autoplay: {
+            pauseOnMouseEnter: true,
+            disableOnInteraction: false,
+            delay: 2000,
+        },
+        navigation: {
+            nextEl: ".case-study-wrapper .swiper-btn-next",
+            prevEl: ".case-study-wrapper .swiper-btn-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: "auto",
+                spaceBetween: 24,
+                navigation: false,
+                preloadImages: false,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+                lazy: {
+                    enabled: true,
+                    loadPrevNext: true,
+                    loadPrevNextAmount: 3
+                },
+                autoplay: {
+                    pauseOnMouseEnter: true,
+                    disableOnInteraction: true,
+                    delay: 2000,
+                },
+            },
+            1200: {
+                slidesPerView: 2,
+            }
+        }
+    });
+
     const swiperBreakpoints = {
         0: {
             slidesPerView: 2,
@@ -271,7 +311,6 @@
     const currenRoadmapItem = document.querySelector('.roadmapSwiper .swiper-slide.current')
     const currenRoadmapItemIndex = currenRoadmapItem && currenRoadmapItem.getAttribute('data-index')
     currenRoadmapItemIndex && roadmapSwiper.slideTo(currenRoadmapItemIndex - (swiperBreakpoints[roadmapSwiper.currentBreakpoint].slidesPerView - 2) / 2)
-
 
     // Features - price countdown
     if (document.querySelector(".price-countdown")) {
@@ -329,7 +368,7 @@
 
     // Pricing feature list
     const activeFeatureListHeader = document.querySelector('.pricing-feature-list-item-header.active')
-    slideDown(activeFeatureListHeader.nextElementSibling)
+    activeFeatureListHeader && slideDown(activeFeatureListHeader.nextElementSibling)
     let featureListHeaders = Array.from(document.querySelectorAll('.pricing-feature-list-item-header'));
     featureListHeaders && featureListHeaders.forEach((featureListHeader) => {
         featureListHeader.addEventListener('click', () => {
@@ -434,6 +473,55 @@
             value += obj[prop];
         }
         return value;
+    }
+
+    // Image comparison slider
+    const slider = document.querySelector("#image-comparison-slider");
+    const sliderImgWrapper = document.querySelector("#image-comparison-slider .img-wrapper");
+    const sliderHandle = document.querySelector("#image-comparison-slider .handle");
+
+    slider.addEventListener("mousemove", sliderMouseMove);
+    slider.addEventListener("touchmove", sliderMouseMove);
+
+    function sliderMouseMove(e) {
+        if (isSliderLocked) return;
+
+        const sliderLeftX = slider.offsetLeft;
+        const sliderWidth = slider.clientWidth;
+        const sliderHandleWidth = sliderHandle.clientWidth;
+
+        let mouseX = (e.clientX || e.touches[0].clientX) - sliderLeftX;
+        if (mouseX < 0)
+            mouseX = 0;
+        else if (mouseX > sliderWidth)
+            mouseX = sliderWidth;
+
+        sliderImgWrapper.style.width = `${((1 - mouseX / sliderWidth) * 100).toFixed(4)}%`;
+        sliderHandle.style.left = `calc(${((mouseX / sliderWidth) * 100).toFixed(4)}% - ${sliderHandleWidth / 2}px)`;
+    }
+
+    let isSliderLocked = false;
+
+    // slider.addEventListener("mousedown", sliderMouseDown);
+    // slider.addEventListener("touchstart", sliderMouseDown);
+    // slider.addEventListener("mouseup", sliderMouseUp);
+    // slider.addEventListener("touchend", sliderMouseUp);
+    // slider.addEventListener("mouseleave", sliderMouseLeave);
+
+    function sliderMouseDown(e) {
+        if (isSliderLocked)
+            isSliderLocked = false;
+        sliderMouseMove(e);
+    }
+
+    function sliderMouseUp() {
+        if (!isSliderLocked)
+            isSliderLocked = true;
+    }
+
+    function sliderMouseLeave() {
+        if (isSliderLocked)
+            isSliderLocked = false;
     }
 
     // Function lazyload
