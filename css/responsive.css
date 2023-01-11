@@ -99,6 +99,10 @@
     #image-comparison-slider, #image-comparison-slider img {
         width: 452px;
     }
+
+    .case-study-box-img {
+        height: 254px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -220,6 +224,31 @@
 
     .saas-setup-wrapper .row:not(:last-child) {
         margin-bottom: 48px !important;
+    }
+
+    .caseStudySwiper .swiper-slide {
+        max-width: 288px;
+    }
+
+    .case-study-wrapper .swiper-btn-next, .case-study-wrapper .swiper-btn-prev {
+        display: none;
+    }
+
+    .case-study-box-img {
+        height: 162px;
+    }
+
+    .case-study-box-text {
+        padding: 24px 16px;
+    }
+
+    .case-study-box-text>div {
+        flex-direction: column;
+    }
+
+    .case-study-box-text>div>span {
+        margin-left: 0;
+        margin-top: 8px;
     }
 }
 
@@ -757,27 +786,6 @@
     }
 
     .market-rating>div {
-        margin-top: 8px;
-    }
-
-    .caseStudySwiper .swiper-slide {
-        max-width: 288px;
-    }
-
-    .case-study-box-img {
-        height: 162px;
-    }
-
-    .case-study-box-text {
-        padding: 24px 16px;
-    }
-
-    .case-study-box-text>div {
-        flex-direction: column;
-    }
-
-    .case-study-box-text>div>span {
-        margin-left: 0;
         margin-top: 8px;
     }
 
