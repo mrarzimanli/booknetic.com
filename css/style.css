@@ -3147,6 +3147,10 @@ main {
     border-color: var(--soft-purple-150);
 }
 
+.how-it-works-box {
+    transition: all 500ms ease-out;
+}
+
 .how-it-works-box p {
     margin-top: 16px;
     font-size: var(--fs-b2);
@@ -3161,6 +3165,8 @@ main {
     cursor: col-resize;
     border-radius: var(--br-16);
     box-shadow: var(--box-shadow-lg);
+    transition: all 500ms ease-out;
+    z-index: 2;
     /* overflow: hidden; */
 }
 
@@ -3182,7 +3188,7 @@ main {
     height: 100%;
     overflow: hidden;
     z-index: 1;
-    transition: all 300ms ease-out;
+    transition: all 500ms ease-out;
 }
 
 #image-comparison-slider .img-wrapper img {
@@ -3194,8 +3200,7 @@ main {
 #image-comparison-slider .handle {
     position: absolute;
     top: -32px;
-    left: calc(50% - 25px);
-    width: 50px;
+    left: 50%;
     height: calc(100% + 64px);
     display: flex;
     flex-direction: column;
@@ -3203,7 +3208,7 @@ main {
     align-items: center;
     user-select: none;
     z-index: 2;
-    transition: all 300ms ease-out;
+    transition: all 500ms ease-out;
 }
 
 #image-comparison-slider .handle-line {
@@ -3212,29 +3217,52 @@ main {
     background-color: var(--purple-600);
 }
 
-#image-comparison-slider .handle-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    border: 2px solid var(--purple-600);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translate(-50%, -50%);
+@keyframes move-handle {
+    0% {
+        left: 50%;
+    }
+
+    25% {
+        left: 60%;
+    }
+
+    75% {
+        left: 40%;
+    }
+
+    100% {
+        left: 50%;
+    }
 }
 
-#image-comparison-slider .handle-circle svg {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+@keyframes move-slider-wrapper {
+    0% {
+        width: 50%;
+    }
+
+    25% {
+        width: 40%;
+    }
+
+    75% {
+        width: 60%;
+    }
+
+    100% {
+        width: 50%;
+    }
 }
 
-#image-comparison-slider .handle-circle svg path {
-    fill: var(--purple-600);
+@media (prefers-reduced-motion: no-preference) {
+    #image-comparison-slider.move-animation .img-wrapper {
+        animation: move-slider-wrapper 2s ease-in-out 1;
+    }
+
+    #image-comparison-slider.move-animation .handle {
+        animation: move-handle 2s ease-in-out 1;
+    }
 }
+
 
 /* ==============================
        Saas business

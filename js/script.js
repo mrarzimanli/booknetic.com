@@ -476,52 +476,89 @@
     }
 
     // Image comparison slider
+    const sliderWrapper = document.querySelector(".how-it-works-wrapper");
     const slider = document.querySelector("#image-comparison-slider");
     const sliderImgWrapper = document.querySelector("#image-comparison-slider .img-wrapper");
     const sliderHandle = document.querySelector("#image-comparison-slider .handle");
 
-    slider.addEventListener("mousemove", sliderMouseMove);
-    slider.addEventListener("touchmove", sliderMouseMove);
+    const sliderItemBefore = document.querySelector(".how-it-works-box.before");
+    const sliderItemAfter = document.querySelector(".how-it-works-box.after");
 
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                slider.classList.add('move-animation');
+                return;
+            }
+            // slider.classList.remove('move-animation');
+        });
+    });
+
+    sliderWrapper.addEventListener('animationend', () => {
+        sliderWrapper.addEventListener("mousemove", sliderMouseMove);
+        sliderWrapper.addEventListener("mouseleave", sliderMouseLeave);
+    });
+
+    observer.observe(sliderWrapper);
     function sliderMouseMove(e) {
-        if (isSliderLocked) return;
+        if (window.matchMedia('(min-width: 992px)').matches) {
+            const sliderLeftX = slider.offsetLeft;
+            const sliderWidth = slider.clientWidth;
 
-        const sliderLeftX = slider.offsetLeft;
-        const sliderWidth = slider.clientWidth;
-        const sliderHandleWidth = sliderHandle.clientWidth;
+            let mouseX = e.clientX - sliderLeftX;
 
-        let mouseX = (e.clientX || e.touches[0].clientX) - sliderLeftX;
-        if (mouseX < 0)
-            mouseX = 0;
-        else if (mouseX > sliderWidth)
-            mouseX = sliderWidth;
+            if (mouseX < 0)
+                mouseX = 0;
+            else if (mouseX > sliderWidth)
+                mouseX = sliderWidth;
 
-        sliderImgWrapper.style.width = `${((1 - mouseX / sliderWidth) * 100).toFixed(4)}%`;
-        sliderHandle.style.left = `calc(${((mouseX / sliderWidth) * 100).toFixed(4)}% - ${sliderHandleWidth / 2}px)`;
+            // mouse sliderin merkezinden nece px hereket edib
+            let diff = Math.abs(sliderWidth / 2 - mouseX)
+
+            // hansi nisbetde boyumesini isteyirik
+            let scaleRatio = 1 + diff / sliderWidth / 2
+
+            // hansi nisbetde translate edirik
+            let translateRatio = sliderWidth * scaleRatio - sliderWidth
+
+            // slideri teyin etdiyimiz nisbetde boyuduruk
+            slider.style.transform = `scale(${(scaleRatio).toFixed(2)})`;
+
+            // mouse-un mərkəzdən solda və ya sağda olduğunu tapıb ona uyğun slideri translate edirik
+            if (sliderWidth / 2 - mouseX < 0) {
+                slider.style.transform += `translateX(${(translateRatio).toFixed(2)}px)`;
+                sliderItemAfter.style.transform = `scale(${(1 - diff / sliderWidth / 2).toFixed(2)})`;
+                sliderItemAfter.style.opacity = `${(1 - mouseX / sliderWidth).toFixed(2)}`
+                sliderItemBefore.style.opacity = "1";
+            }
+            else {
+                slider.style.transform += `translateX(${(translateRatio * -1).toFixed(2)}px)`;
+                sliderItemBefore.style.transform = `scale(${(1 - diff / sliderWidth / 2).toFixed(2)})`;
+                sliderItemBefore.style.opacity = `${(mouseX / sliderWidth).toFixed(2)}`
+                sliderItemAfter.style.opacity = "1";
+            }
+
+            let rec = slider.getBoundingClientRect()
+            let dynamicMouseX = e.clientX - rec.left;
+
+            if (dynamicMouseX < 0)
+                dynamicMouseX = 0;
+            else if (dynamicMouseX > rec.width)
+                dynamicMouseX = rec.width;
+
+            sliderImgWrapper.style.width = `${((1 - dynamicMouseX / rec.width) * 100).toFixed(2)}%`;
+            sliderHandle.style.left = `calc(${((dynamicMouseX / rec.width) * 100).toFixed(2)}%`;
+        }
     }
 
-    let isSliderLocked = false;
-
-    // slider.addEventListener("mousedown", sliderMouseDown);
-    // slider.addEventListener("touchstart", sliderMouseDown);
-    // slider.addEventListener("mouseup", sliderMouseUp);
-    // slider.addEventListener("touchend", sliderMouseUp);
-    // slider.addEventListener("mouseleave", sliderMouseLeave);
-
-    function sliderMouseDown(e) {
-        if (isSliderLocked)
-            isSliderLocked = false;
-        sliderMouseMove(e);
-    }
-
-    function sliderMouseUp() {
-        if (!isSliderLocked)
-            isSliderLocked = true;
-    }
-
-    function sliderMouseLeave() {
-        if (isSliderLocked)
-            isSliderLocked = false;
+    function sliderMouseLeave(e) {
+        sliderItemAfter.style.transform = "scale(1)";
+        sliderItemAfter.style.opacity = "1";
+        sliderItemBefore.style.transform = "scale(1)";
+        sliderItemBefore.style.opacity = "1";
+        slider.style.transform = "scale(1) translate(0)";
+        sliderImgWrapper.style.width = "50%";
+        sliderHandle.style.left = "50%"
     }
 
     // Function lazyload
